@@ -7,7 +7,7 @@ Highcharts.setOptions({
     }
 });
 
-Highcharts.chart('chart-expense-travel-foreign-visit', {
+Highcharts.chart('chart-expense-travel-international', {
     chart: {
         type: 'pie',
         custom: {},
@@ -20,7 +20,7 @@ Highcharts.chart('chart-expense-travel-foreign-visit', {
                 if (!customLabel) {
                     customLabel = chart.options.chart.custom.label =
                         chart.renderer.label(
-                            '<strong>ค่ายใช้จ่าย</strong><br/><strong>การเดินทาง</strong><br><strong>ประชุมนานาชาติ</strong><span style="font-size: 1em;"></span></br>7,000,000,000</br>บาท'
+                            '<strong>ค่ายใช้จ่าย</strong><br/><strong>การเดินทาง</strong><br><strong>ประชุมนานาชาติ</strong><span style="font-size: 1em;"></span></br>1,000,000,000</br>บาท'
                         )
                             .css({
                                 color: '#000',
@@ -50,7 +50,7 @@ Highcharts.chart('chart-expense-travel-foreign-visit', {
         }
     },
     title: {
-        text: 'แผนภูมิแสดงค่าใช้จ่ายในการเดินทางไปประชุมทวีภาคี<br>และไปเยือนต่างประเทศของคณะกรรมการ'
+        text: 'แผนภูมิแสดงค่าใช้จ่ายในการเดินทางไปประชุมนานชาติ<br>ไปเยือนต่างประเทศและรับรองแขกต่างประเทศ'
     },
     tooltip: {
         pointFormat: '{series.name}: <b>{point.percentage:.0f}%</b>'
@@ -92,17 +92,13 @@ Highcharts.chart('chart-expense-travel-foreign-visit', {
         colorByPoint: true,
         innerSize: '75%',
         data: [{
-            name: 'สำนักกรรมาธิการ 1',
-            color: '#888C8B', // สีแดง
-            y: 30000000000
+            name: 'ใช้ไปแล้ว',
+            color: '#313F59', // สีแดง
+            y: 450000000
         }, {
-            name: 'สำนักกรรมาธิการ 2',
-            color: '#313F59', // สีเหลือ
-            y: 20000000000
-        }, {
-            name: 'สำนักกรรมาธิการ 3',
+            name: 'คงเหลือ',
             color: '#2F5259', // สีเหลือ
-            y: 20000000000
+            y: 550000000
         }]
     }]
 });
