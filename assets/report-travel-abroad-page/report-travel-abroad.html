@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>รายงานการเดินทางไปต่างประเทศ</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div id="navbar-placeholder"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('../../navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar-placeholder').innerHTML = data;
+                    // Re-initialize Bootstrap components
+                    var dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'))
+                    var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
+                        return new bootstrap.Dropdown(dropdownToggleEl)
+                    })
+                });
+        });
+    </script>
+
+    <h1 class="text-center">รายงานการเดินทางไปต่างประเทศ</h1>
+    <div class="container-fluid py-4">
+        <!-- หัวข้องบประมาณภาพรวม -->
+        <h2 class="mb-2">แผนภูมิค่าใช้จ่ายในการเดินทางไปประชุมทวีภาคีและไปเยือนต่างประเทศของคณะกรรมาธิการ</h2>
+        <section>
+            <div class="row justify-content-center">
+                <!-- คอลัมน์ซ้าย - การ์ดข้อมูล -->
+                <div class="col-md-6">
+                    <!-- การ์ดงบประมาณภาพรวม -->
+                    <div class="card shadow-sm mb-4" style="overflow: hidden;">
+                        <div class="card-body p-0">
+                            <div class="text-white p-3" style="background-color: #590F23;">
+                                <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center">
+                                    <img src="../images/file-invoice-dollar-solid.svg" 
+                                         alt="file-invoice-dollar Icon" 
+                                         class="img-fluid mb-2 mb-sm-0 mx-auto mx-sm-3" 
+                                         style="width: 40px; height: 40px; filter: brightness(0) invert(1);">
+                                    <h2 class="h1 mb-0 text-center text-sm-start w-100">งบประมาณที่ได้รับ</h2>
+                                </div>
+                            </div>
+                            <div class="card-content p-3 text-center">
+                                <div class="h1 mb-0" style="color: #590F23; font-weight: bold;">100,000 ล้านบาท</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- การ์ดเบิกจ่าย -->
+                    <div class="card shadow-sm mb-4" style="overflow: hidden;">
+                        <div class="card-body p-0">
+                            <div class="text-white p-3" style="background-color: #8A0C27;">
+                                <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center">
+                                    <img src="../images/credit-card-regular.svg" 
+                                         alt="credit-card Icon" 
+                                         class="img-fluid mb-2 mb-sm-0 mx-auto mx-sm-3" 
+                                         style="width: 40px; height: 40px; filter: brightness(0) invert(1);">
+                                    <h2 class="h1 mb-0 text-center text-sm-start w-100">ใช้ไปแล้ว</h2>
+                                </div>
+                            </div>
+                            <div class="card-content p-3 text-center">
+                                <div class="h1 mb-0" style="color: #8A0C27;">60,000 ล้านบาท</div>
+                                <div class="h2" style="color: #8A0C27;">(คิดเป็นร้อยละ 60)</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- การ์ดคงเหลือ -->
+                    <div class="card shadow-sm mb-4" style="overflow: hidden;">
+                        <div class="card-body p-0">
+                            <div class="text-white p-3" style="background-color: #2F5259;">
+                                <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center">
+                                    <img src="../images/money-bill-1-regular.svg" 
+                                         alt="money-bill Icon" 
+                                         class="img-fluid mb-2 mb-sm-0 mx-auto mx-sm-3" 
+                                         style="width: 40px; height: 40px; filter: brightness(0) invert(1);">
+                                    <h2 class="h1 mb-0 text-center text-sm-start w-100">คงเหลือ</h2>
+                                </div>
+                            </div>
+                            <div class="card-content p-3 text-center">
+                                <div class="h1 mb-0" style="color: #2F5259;">40,000 ล้านบาท</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- คอลัมน์ขวา - แผนภูมิ -->
+                <div class="col-md-6">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <div id="chart-overall-budget"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+
+    <script src="../js/highcharts.js"></script>
+    <script src="../js/exporting.js"></script>
+    <script src="../js/accessibility.js"></script>
+    <script src="../js/chart.js"></script>
+    <script src="chart-overall-budget.js"></script>
+    <script src="bar-procurement-status.js"></script>
+    <script src="bar-budget-status-by-type.js"></script>
+
+</body>
+
+</html>

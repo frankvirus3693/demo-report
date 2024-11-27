@@ -8,16 +8,16 @@ Highcharts.setOptions({
     }
 });
 
-Highcharts.chart('bar-budget-status-by-type', {
+Highcharts.chart('bar-compare-expense-by-type-quarter', {
     chart: {
         type: 'bar'
     },
     title: {
-        text: 'แผนภูมิสถานะงบประมาณ จำแนกตามประเภทงบรายจ่าย',
+        text: 'แผนภูมิเปรียบเทียบค่าใช้จ่ายตามไตรมาส',
         align: 'center'
     },
     xAxis: {
-        categories: ['ค่าใช้จ่ายบุคคล', 'ค่าใช้จ่ายดำเนินการ', 'ค่าครุภัณฑ์', 'ค่าที่ดินสิ่งก่อสร้าง'],
+        categories: ['2567 ไตรมาสที่ 1', '2567 ไตรมาสที่ 2', '2567 ไตรมาสที่ 3'],
         title: {
             text: 'ประเภทรายจ่าย',
         },
@@ -58,16 +58,20 @@ Highcharts.chart('bar-budget-status-by-type', {
         enabled: false
     },
     series: [{
-        name: 'งบที่ได้รับจัดสรร',
-        color: '#590F23',
-        data: [10.2,15.4,12.5,15],
+        name: 'ค่าใช้จ่ายบุคคล',
+        color: '#26151B',
+        data: [220,240,230],
     },{
-        name: 'เบิกจ่าย',
-        color: '#881227',
-        data: [8.4,5.4,4.5,12],
+        name: 'ค่าใช้จ่ายดำเนินการ',
+        color: '#3E577F',
+        data: [240,220,160],
     },{
-        name: 'คงเหลือ',
-        color: '#315259',
-        data: [3.6,10,8,3],
+        name: 'ค่าครุภัณฑ์',
+        color: '#2F5948',
+        data: [150,200,240],
+    },{
+        name: 'ค่าที่ดินสิ่งก่อสร้าง',
+        color: '#7C696D',
+        data: [200,160,136],
     }]
 });

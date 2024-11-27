@@ -7,31 +7,26 @@
     <title>รายงานสรุปผลการใช้จ่ายเงินงบประมาณ</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/index.css">
+    
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link" href="../../index.html">หน้าแรก <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../report-results-summary-of-budget-page/report-results-summary-of-budget.html">รายงานสรุปผลการใช้จ่ายเงินงบประมาณ</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../report-result-budget-spending-page/report-result-budget-spending.html">รายงานผลการติดตามสถานะการใช้เงินงบประมาณ</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../report-budget-spending-comparison-page/report-budget-spending-comparison.html">รายงานเปรียบเทียบการใช้จ่ายเงินงบประมาณ</a>
-              </li>
-          </ul>
-        </div>
-      </nav>
+    <!-- Navbar -->
+    <div id="navbar-placeholder"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('../../navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar-placeholder').innerHTML = data;
+                    // Re-initialize Bootstrap components
+                    var dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'))
+                    var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
+                        return new bootstrap.Dropdown(dropdownToggleEl)
+                    })
+                });
+        });
+    </script>
 
     <h1 class="text-center">รายงานสรุปผลการใช้จ่ายเงินงบประมาณ</h1>
     <div class="container-fluid py-4">
@@ -50,11 +45,11 @@
                                          alt="file-invoice-dollar Icon" 
                                          class="img-fluid mb-2 mb-sm-0 mx-auto mx-sm-3" 
                                          style="width: 40px; height: 40px; filter: brightness(0) invert(1);">
-                                    <h2 class="title h4 mb-0 text-center text-sm-start w-100">งบประมาณภาพรวม</h2>
+                                    <h2 class="h1 mb-0 text-center text-sm-start w-100">งบประมาณภาพรวม</h2>
                                 </div>
                             </div>
-                            <div class="p-3 text-center">
-                                <div class="amount h2 mb-0" style="color: #590F23; font-weight: bold;">100,000 ล้านบาท</div>
+                            <div class="card-content p-3 text-center">
+                                <div class="h1 mb-0" style="color: #590F23;">100,000 ล้านบาท</div>
                             </div>
                         </div>
                     </div>
@@ -68,12 +63,12 @@
                                          alt="credit-card Icon" 
                                          class="img-fluid mb-2 mb-sm-0 mx-auto mx-sm-3" 
                                          style="width: 40px; height: 40px; filter: brightness(0) invert(1);">
-                                    <h2 class="title h4 mb-0 text-center text-sm-start w-100">เบิกจ่าย</h2>
+                                    <h2 class="h1 mb-0 text-center text-sm-start w-100">เบิกจ่าย</h2>
                                 </div>
                             </div>
-                            <div class="p-3 text-center">
-                                <div class="amount h2 mb-0" style="color: #8A0C27;">60,000 ล้านบาท</div>
-                                <div class="percentage h4" style="color: #8A0C27;">(คิดเป็นร้อยละ 60)</div>
+                            <div class="card-content p-3 text-center">
+                                <div class="h1 mb-0" style="color: #8A0C27;">60,000 ล้านบาท</div>
+                                <div class="h2" style="color: #8A0C27;">(คิดเป็นร้อยละ 60)</div>
                             </div>
                         </div>
                     </div>
@@ -87,11 +82,11 @@
                                          alt="money-bill Icon" 
                                          class="img-fluid mb-2 mb-sm-0 mx-auto mx-sm-3" 
                                          style="width: 40px; height: 40px; filter: brightness(0) invert(1);">
-                                    <h2 class="title mb-0 text-center text-sm-start w-100">คงเหลือ</h2>
+                                    <h2 class="h1 mb-0 text-center text-sm-start w-100">คงเหลือ</h2>
                                 </div>
                             </div>
-                            <div class="p-3 text-center">
-                                <div class="amount h2 mb-0" style="color: #2F5259;">40,000 ล้านบาท</div>
+                            <div class="card-content p-3 text-center">
+                                <div class="amount h1 mb-0" style="color: #2F5259;">40,000 ล้านบาท</div>
                             </div>
                         </div>
                     </div>
@@ -161,7 +156,7 @@
             </div>
             <div class="card shadow-sm mb-4">
                 <div class="card-body">
-                    <div id="column-Chart-show-dimensions"></div>
+                    <div id="column-current-expenses-capital-expenditures"></div>
                 </div>
             </div>
         </section>
@@ -186,12 +181,12 @@
                                          alt="file-invoice-dollar Icon" 
                                          class="img-fluid mb-2 mb-sm-0 mx-auto mx-sm-3" 
                                          style="width: 40px; height: 40px; filter: brightness(0) invert(1);">
-                                    <h2 class="title h4 mb-0 text-center text-sm-start w-100">ค่าใช้จ่ายสูงสุด</h2>
+                                    <h2 class="h1 mb-0 text-center text-sm-start w-100">ค่าใช้จ่ายสูงสุด</h2>
                                 </div>
                             </div>
-                            <div class="p-3 text-center">
-                                <div class="amount h2 mb-0" style="color: #590F23;">8.4 ล้านบาท</div>
-                                <div class="month h4 " style="color: #590F23;">(เดือน กุมภาพันธ์)</div>
+                            <div class="card-content p-3 text-center">
+                                <div class="h1 mb-0" style="color: #590F23;">8.4 ล้านบาท</div>
+                                <div class="h2 " style="color: #590F23;">(เดือน กุมภาพันธ์)</div>
                             </div>
                         </div>
                     </div>
@@ -207,12 +202,12 @@
                                          alt="credit-card Icon" 
                                          class="img-fluid mb-2 mb-sm-0 mx-auto mx-sm-3" 
                                          style="width: 40px; height: 40px; filter: brightness(0) invert(1);">
-                                    <h2 class="title h4 mb-0 text-center text-sm-start w-100">ค่าใช้จ่ายต่ำสุด</h2>
+                                    <h2 class="h1 mb-0 text-center text-sm-start w-100">ค่าใช้จ่ายต่ำสุด</h2>
                                 </div>
                             </div>
-                            <div class="p-3 text-center">
-                                <div class="amount h2 mb-0" style="color: #8A0C27;">2.5 ล้านบาท</div>
-                                <div class="month h4 " style="color: #8A0C27;">(เดือน มิถุนายน)</div>
+                            <div class="card-content p-3 text-center">
+                                <div class="h1 mb-0" style="color: #8A0C27;">2.5 ล้านบาท</div>
+                                <div class="h2 " style="color: #8A0C27;">(เดือน มิถุนายน)</div>
                             </div>
                         </div>
                     </div>
@@ -228,11 +223,11 @@
                                          alt="money-bill Icon" 
                                          class="img-fluid mb-2 mb-sm-0 mx-auto mx-sm-3" 
                                          style="width: 40px; height: 40px; filter: brightness(0) invert(1);">
-                                    <h2 class="title h4 mb-0 text-center text-sm-start w-100">ค่าใช้จ่ายเฉลี่ย</h2>
+                                    <h2 class="h1 mb-0 text-center text-sm-start w-100">ค่าใช้จ่ายเฉลี่ย</h2>
                                 </div>
                             </div>
-                            <div class="p-3 text-center">
-                                <div class="amount h2 mb-0" style="color: #2F5259;">5.4 ล้านบาท</div>
+                            <div class="card-content p-3 text-center">
+                                <div class="h1 mb-0" style="color: #2F5259;">5.4 ล้านบาท</div>
                             </div>
                         </div>
                     </div>
@@ -260,12 +255,12 @@
                                          alt="file-invoice-dollar Icon" 
                                          class="img-fluid mb-2 mb-sm-0 mx-auto mx-sm-3" 
                                          style="width: 40px; height: 40px; filter: brightness(0) invert(1);">
-                                    <h2 class="title h4 mb-0 text-center text-sm-start w-100">ค่าใช้จ่ายสูงสุด</h2>
+                                    <h2 class="h1 mb-0 text-center text-sm-start w-100">ค่าใช้จ่ายสูงสุด</h2>
                                 </div>
                             </div>
-                            <div class="p-3 text-center">
-                                <div class="amount h2 mb-0" style="color: #590F23;">6.8 ล้านบาท</div>
-                                <div class="month h4 " style="color: #590F23;">(เดือน สิงหาคม)</div>
+                            <div class="card-content p-3 text-center">
+                                <div class="h1 mb-0" style="color: #590F23;">6.8 ล้านบาท</div>
+                                <div class="h2 " style="color: #590F23;">(เดือน สิงหาคม)</div>
                             </div>
                         </div>
                     </div>
@@ -281,12 +276,12 @@
                                          alt="credit-card Icon" 
                                          class="img-fluid mb-2 mb-sm-0 mx-auto mx-sm-3" 
                                          style="width: 40px; height: 40px; filter: brightness(0) invert(1);">
-                                    <h2 class="title h4 mb-0 text-center text-sm-start w-100">ค่าใช้จ่ายต่ำสุด</h2>
+                                    <h2 class="h1 mb-0 text-center text-sm-start w-100">ค่าใช้จ่ายต่ำสุด</h2>
                                 </div>
                             </div>
-                            <div class="p-3 text-center">
-                                <div class="amount h2 mb-0" style="color: #8A0C27;">-3.2 ล้านบาท</div>
-                                <div class="month h4 " style="color: #8A0C27;">(เดือน เมษายน)</div>
+                            <div class="card-content p-3 text-center">
+                                <div class="h1 mb-0" style="color: #8A0C27;">-3.2 ล้านบาท</div>
+                                <div class="h2 " style="color: #8A0C27;">(เดือน เมษายน)</div>
                             </div>
                         </div>
                     </div>
@@ -302,11 +297,11 @@
                                          alt="money-bill Icon" 
                                          class="img-fluid mb-2 mb-sm-0 mx-auto mx-sm-3" 
                                          style="width: 40px; height: 40px; filter: brightness(0) invert(1);">
-                                    <h2 class="title h4 mb-0 text-center text-sm-start w-100">ค่าใช้จ่ายเฉลี่ย</h2>
+                                    <h2 class="h1 mb-0 text-center text-sm-start w-100">ค่าใช้จ่ายเฉลี่ย</h2>
                                 </div>
                             </div>
-                            <div class="p-3 text-center">
-                                <div class="amount h2 mb-0" style="color: #2F5259;">4.8 ล้านบาท</div>
+                            <div class="card-content p-3 text-center">
+                                <div class="h1 mb-0" style="color: #2F5259;">4.2 ล้านบาท</div>
                             </div>
                         </div>
                     </div>
@@ -318,7 +313,7 @@
         <section>
             <div class="card shadow-sm mb-4">
                 <div class="card-body">
-                    <div id="bar-project-expense-per-office"></div>
+                    <div id="bar-project-expense-per-office" style="height: 500px;"></div>
                 </div>
             </div>
         </section>
@@ -327,23 +322,27 @@
         <section>
             <div class="card shadow-sm mb-4">
                 <div class="card-body">
-                    <div id="bar-expense-item"></div>
+                    <div id="bar-project-expense-budget-items" style="height: 500px;"></div>
                 </div>
             </div>
         </section>
     </div>
 
+
     <!-- Scripts -->
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    
     <script src="../js/highcharts.js"></script>
     <script src="../js/exporting.js"></script>
     <script src="../js/accessibility.js"></script>
     <script src="../js/chart.js"></script>
     <script src="chart-overall-budget.js"></script>
-    <script src="column-Chart-show-dimensions.js"></script>
+    <script src="column-current-expenses-capital-expenditures.js"></script>
     <script src="area-project-expenses-monthly.js"></script>
     <script src="area-project-expenses-year.js"></script>
     <script src="bar-project-expense-per-office.js"></script>
-    <script src="bar-expense-item.js"></script>
+    <script src="bar-project-expense-budget-items.js"></script>
 </body>
 
 </html>

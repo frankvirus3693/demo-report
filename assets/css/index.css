@@ -25,24 +25,20 @@ section {
     border-radius: 5px;
 }
 
-
-/* กำหนดตัวหนังสือ */
-.title {
-    font-size: 40px;
-}
-
-.title-m {
-    font-size: 32px;
-}
-
-.amount {
-    font-family: 'DBHeavent', sans-serif;
+.navbar-nav .nav-link{
+    font-size: 16px;
     font-weight: bold;
-    font-size: 40px;
 }
 
-.percentage ,.month {
+/* กำหนดตัวหนังสือสำหรับ card ขนาด md-6 */
+.card-body {
+    font-family: 'THSARABUNNEW', sans-serif;
+}
+
+.card-content {
     font-family: 'DBHeavent', sans-serif;
+}
+
+.card-content .h1 , .card-content .h2 {
     font-weight: bold;
-    font-size: 25px;
 }

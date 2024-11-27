@@ -3,20 +3,21 @@ Highcharts.setOptions({
         style: {
             fontFamily: 'THSARABUNNEW, sans-serif',
             fontSize: '24px'
+            
         }
     }
 });
 
-Highcharts.chart('bar-project-expense-budget-items', {
+Highcharts.chart('bar-budget-spend-for-project', {
     chart: {
         type: 'bar'
     },
     title: {
-        text: 'แผนภูมิการใช้จ่ายรายการงบรายจ่าย',
+        text: 'แผนภูมิการใช้จ่ายงบประมาณรายสำนัก (โครงการ)',
         align: 'center'
     },
     xAxis: {
-        categories: ['ค่าใช้จ่ายบุคคล','ค่าใช้จ่ายดำเนินการ','ค่าครุภัณฑ์','ค่าที่ดินสิ่งก่อสร้าง'],
+        categories: ['สำนักกรรมาธิการ 1','สำนักกรรมาธิการ 2','สำนักกรรมาธิการ 3'],
         title: {
             text: 'สำนัก',
         },
@@ -25,9 +26,8 @@ Highcharts.chart('bar-project-expense-budget-items', {
     },
     yAxis: {
         min: 0,
-        max: 100,
         title: {
-            text: 'เปอเซนต์การใช้จ่าย(%)',
+            text: 'จำนวนเงิน(ล้านบาท)',
             align: 'middle'
         },
         labels: {
@@ -36,7 +36,7 @@ Highcharts.chart('bar-project-expense-budget-items', {
         gridLineWidth: 0
     },
     tooltip: {
-        valueSuffix: ' %'
+        valueSuffix: ' ล้านบาท'
     },
     plotOptions: {
         bar: {
@@ -44,7 +44,7 @@ Highcharts.chart('bar-project-expense-budget-items', {
             dataLabels: {
                 enabled: true, // เปิดใช้งานการแสดงค่าบนแท่ง
                 formatter: function() {
-                    return this.y.toLocaleString() + ' %';
+                    return this.y.toLocaleString() + ' ล้านบาท';
                 }
 
             },
@@ -60,10 +60,14 @@ Highcharts.chart('bar-project-expense-budget-items', {
     series: [{
         name: 'งบที่ได้รับจัดสรร',
         color: '#590F23',
-        data: [85,35,65,45],
+        data: [5400,4600,6000],
     },{
         name: 'เบิกจ่าย',
         color: '#881227',
-        data: [45,40,45,30],
+        data: [4500,3200,3800],
+    },{
+        name: 'คงเหลือ',
+        color: '#315259',
+        data: [900,1400,2200],
     }]
 });

@@ -1,4 +1,13 @@
-Highcharts.chart('column-Chart-show-dimensions', {
+Highcharts.setOptions({
+    chart: {
+        style: {
+            fontFamily: 'THSARABUNNEW, sans-serif',
+             fontSize: '24px'
+        }
+    }
+});
+
+Highcharts.chart('column-current-expenses-capital-expenditures', {
     chart: {
         type: 'column'
     },

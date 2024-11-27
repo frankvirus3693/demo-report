@@ -10,28 +10,22 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link" href="../../index.html">หน้าแรก <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../report-results-summary-of-budget-page/report-results-summary-of-budget.html">รายงานสรุปผลการใช้จ่ายเงินงบประมาณ</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../report-result-budget-spending-page/report-result-budget-spending.html">รายงานผลการติดตามสถานะการใช้เงินงบประมาณ</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../report-budget-spending-comparison-page/report-budget-spending-comparison.html">รายงานเปรียบเทียบการใช้จ่ายเงินงบประมาณ</a>
-              </li>
-          </ul>
-        </div>
-      </nav>
+    <!-- Navbar -->
+    <div id="navbar-placeholder"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('../../navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar-placeholder').innerHTML = data;
+                    // Re-initialize Bootstrap components
+                    var dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'))
+                    var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
+                        return new bootstrap.Dropdown(dropdownToggleEl)
+                    })
+                });
+        });
+    </script>
 
     <h1 class="text-center">รายงานเปรียบเทียบการใช้จ่ายเงินงบประมาณ</h1>
     <div class="container-fluid py-4">
@@ -45,15 +39,15 @@
                         <div class="card-body p-0">
                             <div class="text-white p-3" style="background-color: #590F23;">
                                 <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center">
-                                    <img src="../images/file-invoice-dollar-solid.svg"
-                                        alt="file-invoice-dollar Icon" class="img-fluid mb-2 mb-sm-0 mx-auto mx-sm-3"
+                                    <img src="../images/file-invoice-dollar-solid.svg" alt="file-invoice-dollar Icon"
+                                        class="img-fluid mb-2 mb-sm-0 mx-auto mx-sm-3"
                                         style="width: 40px; height: 40px; filter: brightness(0) invert(1);">
-                                    <h2 class="title-m h4 mb-0 text-center text-sm-start w-100">งบประมาณภาพรวม (ปี 2567)
-                                    </h2>
+                                    <h3 class="h3 mb-0 text-center text-sm-start w-100">งบประมาณภาพรวม (ปี 2567)
+                                    </h3>
                                 </div>
                             </div>
-                            <div class="p-3 text-center">
-                                <div class="amount h2 mb-0" style="color: #590F23;">8.4 ล้านบาท</div>
+                            <div class="card-content p-3 text-center">
+                                <div class="h1 mb-0" style="color: #590F23;">30,000 ล้านบาท</div>
                             </div>
                         </div>
                     </div>
@@ -68,12 +62,12 @@
                                     <img src="../images/credit-card-regular.svg" alt="credit-card Icon"
                                         class="img-fluid mb-2 mb-sm-0 mx-auto mx-sm-3"
                                         style="width: 40px; height: 40px; filter: brightness(0) invert(1);">
-                                    <h2 class="title-m h4 mb-0 text-center text-sm-start w-100">เบิกจ่าย (ปี 2567)</h2>
+                                    <h3 class="h3 mb-0 text-center text-sm-start w-100">เบิกจ่าย (ปี 2567)</h3>
                                 </div>
                             </div>
-                            <div class="p-3 text-center">
-                                <div class="amount h2 mb-0" style="color: #8A0C27;">2.5 ล้านบาท</div>
-                                <div class="percentage h4 " style="color: #8A0C27;">(คิดเป็นร้อยละ 33)</div>
+                            <div class="card-content p-3 text-center">
+                                <div class="h1 mb-0" style="color: #8A0C27;">10,000 ล้านบาท</div>
+                                <div class="h2" style="color: #8A0C27;">(คิดเป็นร้อยละ 33)</div>
                             </div>
                         </div>
                     </div>
@@ -88,11 +82,11 @@
                                     <img src="../images/money-bill-1-regular.svg" alt="money-bill Icon"
                                         class="img-fluid mb-2 mb-sm-0 mx-auto mx-sm-3"
                                         style="width: 40px; height: 40px; filter: brightness(0) invert(1);">
-                                    <h2 class="title-m h4 mb-0 text-center text-sm-start w-100">คงเหลือ (ปี 2567)</h2>
+                                    <h3 class="h3 mb-0 text-center text-sm-start w-100">คงเหลือ (ปี 2567)</h3>
                                 </div>
                             </div>
-                            <div class="p-3 text-center">
-                                <div class="amount h2 mb-0" style="color: #2F5259;">5.4 ล้านบาท</div>
+                            <div class="card-content p-3 text-center">
+                                <div class="h1 mb-0" style="color: #2F5259;">20,000 ล้านบาท</div>
                             </div>
                         </div>
                     </div>
@@ -106,15 +100,15 @@
                         <div class="card-body p-0">
                             <div class="text-white p-3" style="background-color: #590F23;">
                                 <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center">
-                                    <img src="../images/file-invoice-dollar-solid.svg"
-                                        alt="file-invoice-dollar Icon" class="img-fluid mb-2 mb-sm-0 mx-auto mx-sm-3"
+                                    <img src="../images/file-invoice-dollar-solid.svg" alt="file-invoice-dollar Icon"
+                                        class="img-fluid mb-2 mb-sm-0 mx-auto mx-sm-3"
                                         style="width: 40px; height: 40px; filter: brightness(0) invert(1);">
-                                    <h2 class="title-m h4 mb-0 text-center text-sm-start w-100">งบประมาณภาพรวม (ปี 2568)
-                                    </h2>
+                                    <h3 class="h3 mb-0 text-center text-sm-start w-100">งบประมาณภาพรวม (ปี 2568)
+                                    </h3>
                                 </div>
                             </div>
-                            <div class="p-3 text-center">
-                                <div class="amount h2 mb-0" style="color: #590F23;">8.4 ล้านบาท</div>
+                            <div class="card-content p-3 text-center">
+                                <div class="h1 mb-0" style="color: #590F23;">13,000 ล้านบาท</div>
                             </div>
                         </div>
                     </div>
@@ -129,12 +123,12 @@
                                     <img src="../images/credit-card-regular.svg" alt="credit-card Icon"
                                         class="img-fluid mb-2 mb-sm-0 mx-auto mx-sm-3"
                                         style="width: 40px; height: 40px; filter: brightness(0) invert(1);">
-                                    <h2 class="title-m h4 mb-0 text-center text-sm-start w-100">เบิกจ่าย (ปี 2568)</h2>
+                                    <h3 class="h3 mb-0 text-center text-sm-start w-100">เบิกจ่าย (ปี 2568)</h3>
                                 </div>
                             </div>
-                            <div class="p-3 text-center">
-                                <div class="amount h2 mb-0" style="color: #8A0C27;">2.5 ล้านบาท</div>
-                                <div class="percentage h4 " style="color: #8A0C27;">(คิดเป็นร้อยละ 10)</div>
+                            <div class="card-content p-3 text-center">
+                                <div class="h1 mb-0" style="color: #8A0C27;">1,300 ล้านบาท</div>
+                                <div class="h2" style="color: #8A0C27;">(คิดเป็นร้อยละ 10)</div>
                             </div>
                         </div>
                     </div>
@@ -149,11 +143,11 @@
                                     <img src="../images/money-bill-1-regular.svg" alt="money-bill Icon"
                                         class="img-fluid mb-2 mb-sm-0 mx-auto mx-sm-3"
                                         style="width: 40px; height: 40px; filter: brightness(0) invert(1);">
-                                    <h2 class="title-m h4 mb-0 text-center text-sm-start w-100">คงเหลือ (ปี 2568)</h2>
+                                    <h3 class="h3 mb-0 text-center text-sm-start w-100">คงเหลือ (ปี 2568)</h3>
                                 </div>
                             </div>
-                            <div class="p-3 text-center">
-                                <div class="amount h2 mb-0" style="color: #2F5259;">5.4 ล้านบาท</div>
+                            <div class="card-content p-3 text-center">
+                                <div class="h1 mb-0" style="color: #2F5259;">11,700 ล้านบาท</div>
                             </div>
                         </div>
                     </div>
@@ -193,14 +187,14 @@
                         <div class="card-body p-0">
                             <div class="text-white p-3" style="background-color: #590F23;">
                                 <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center">
-                                    <img src="../images/file-invoice-dollar-solid.svg"
-                                        alt="file-invoice-dollar Icon" class="img-fluid mb-2 mb-sm-0 mx-auto mx-sm-3"
+                                    <img src="../images/file-invoice-dollar-solid.svg" alt="file-invoice-dollar Icon"
+                                        class="img-fluid mb-2 mb-sm-0 mx-auto mx-sm-3"
                                         style="width: 40px; height: 40px; filter: brightness(0) invert(1);">
-                                    <h2 class="title h4 mb-0 text-center text-sm-start w-100">ส่วนต่างงบประมาณ</h2>
+                                    <h3 class="h3 mb-0 text-center text-sm-start w-100">ส่วนต่างงบประมาณ</h3>
                                 </div>
                             </div>
-                            <div class="p-3 text-center">
-                                <div class="amount h2 mb-0" style="color: #590F23;">8.4 ล้านบาท</div>
+                            <div class="card-content p-3 text-center">
+                                <div class="h1 mb-0" style="color: #590F23;">17,000 ล้านบาท</div>
                             </div>
                         </div>
                     </div>
@@ -215,12 +209,12 @@
                                     <img src="../images/credit-card-regular.svg" alt="credit-card Icon"
                                         class="img-fluid mb-2 mb-sm-0 mx-auto mx-sm-3"
                                         style="width: 40px; height: 40px; filter: brightness(0) invert(1);">
-                                    <h2 class="title h4 mb-0 text-center text-sm-start w-100">ส่วนต่างเบิกจ่าย</h2>
+                                    <h3 class="h3 mb-0 text-center text-sm-start w-100">ส่วนต่างเบิกจ่าย</h3>
                                 </div>
                             </div>
-                            <div class="p-3 text-center">
-                                <div class="amount h2 mb-0" style="color: #8A0C27;">2.5 ล้านบาท</div>
-                                <div class="month h4 " style="color: #8A0C27;">(คิดเป็นร้อยละ 18)</div>
+                            <div class="card-content p-3 text-center">
+                                <div class="h1 mb-0" style="color: #8A0C27;">8,700 ล้านบาท</div>
+                                <div class="h2" style="color: #8A0C27;">(คิดเป็นร้อยละ 18)</div>
                             </div>
                         </div>
                     </div>
@@ -235,11 +229,11 @@
                                     <img src="../images/money-bill-1-regular.svg" alt="money-bill Icon"
                                         class="img-fluid mb-2 mb-sm-0 mx-auto mx-sm-3"
                                         style="width: 40px; height: 40px; filter: brightness(0) invert(1);">
-                                    <h2 class="title h4 mb-0 text-center text-sm-start w-100">ส่วนต่างคงเหลือ</h2>
+                                    <h3 class="h3 mb-0 text-center text-sm-start w-100">ส่วนต่างคงเหลือ</h3>
                                 </div>
                             </div>
-                            <div class="p-3 text-center">
-                                <div class="amount h2 mb-0" style="color: #2F5259;">5.4 ล้านบาท</div>
+                            <div class="card-content p-3 text-center">
+                                <div class="h1 mb-0" style="color: #2F5259;">8,300 ล้านบาท</div>
                             </div>
                         </div>
                     </div>
@@ -274,11 +268,11 @@
                                     <img src="../images/credit-card-regular.svg" alt="credit-card Icon"
                                         class="img-fluid mb-2 mb-sm-0 mx-auto mx-sm-3"
                                         style="width: 40px; height: 40px; filter: brightness(0) invert(1);">
-                                    <h2 class="title h4 mb-0 text-center text-sm-start w-100">เบิกจ่าย (ปี 2566)</h2>
+                                    <h3 class="h3 mb-0 text-center text-sm-start w-100">เบิกจ่าย (ปี 2566)</h3>
                                 </div>
                             </div>
-                            <div class="p-3 text-center">
-                                <div class="amount h2 mb-0" style="color: #8A0C27;">20,000 ล้านบาท</div>
+                            <div class="card-content p-3 text-center">
+                                <div class="h1 mb-0" style="color: #8A0C27;">20,000 ล้านบาท</div>
                             </div>
                         </div>
                     </div>
@@ -293,11 +287,11 @@
                                     <img src="../images/credit-card-regular.svg" alt="credit-card Icon"
                                         class="img-fluid mb-2 mb-sm-0 mx-auto mx-sm-3"
                                         style="width: 40px; height: 40px; filter: brightness(0) invert(1);">
-                                    <h2 class="title h4 mb-0 text-center text-sm-start w-100">เบิกจ่าย (ปี 2567)</h2>
+                                    <h3 class="h3 mb-0 text-center text-sm-start w-100">เบิกจ่าย (ปี 2567)</h3>
                                 </div>
                             </div>
-                            <div class="p-3 text-center">
-                                <div class="amount h2 mb-0" style="color: #8A0C27;">10,000 ล้านบาท</div>
+                            <div class="card-content p-3 text-center">
+                                <div class="h1 mb-0" style="color: #8A0C27;">10,000 ล้านบาท</div>
                             </div>
                         </div>
                     </div>
@@ -312,11 +306,11 @@
                                     <img src="../images/credit-card-regular.svg" alt="credit-card Icon"
                                         class="img-fluid mb-2 mb-sm-0 mx-auto mx-sm-3"
                                         style="width: 40px; height: 40px; filter: brightness(0) invert(1);">
-                                    <h2 class="title h4 mb-0 text-center text-sm-start w-100">เบิกจ่าย (ปี 2568)</h2>
+                                    <h3 class="h3 mb-0 text-center text-sm-start w-100">เบิกจ่าย (ปี 2568)</h3>
                                 </div>
                             </div>
-                            <div class="p-3 text-center">
-                                <div class="amount h2 mb-0" style="color: #8A0C27;">13,000 ล้านบาท</div>
+                            <div class="card-content p-3 text-center">
+                                <div class="h1 mb-0" style="color: #8A0C27;">13,000 ล้านบาท</div>
                             </div>
                         </div>
                     </div>
@@ -334,15 +328,15 @@
                         <div class="card-body p-0">
                             <div class="text-white p-3" style="background-color: #590F23;">
                                 <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center">
-                                    <img src="../images/file-invoice-dollar-solid.svg"
-                                        alt="file-invoice-dollar Icon" class="img-fluid mb-2 mb-sm-0 mx-auto mx-sm-3"
+                                    <img src="../images/file-invoice-dollar-solid.svg" alt="file-invoice-dollar Icon"
+                                        class="img-fluid mb-2 mb-sm-0 mx-auto mx-sm-3"
                                         style="width: 40px; height: 40px; filter: brightness(0) invert(1);">
-                                    <h2 class="title h4 mb-0 text-center text-sm-start w-100">คำขอตั้งปีงบประมาณปี 2566
-                                    </h2>
+                                    <h3 class="h3 mb-0 text-center text-sm-start w-100">คำขอตั้งปีงบประมาณปี 2566
+                                    </h3>
                                 </div>
                             </div>
-                            <div class="p-3 text-center">
-                                <div class="amount h2 mb-0" style="color: #590F23;">30,000 ล้านบาท</div>
+                            <div class="card-content p-3 text-center">
+                                <div class="h1 mb-0" style="color: #590F23;">30,000 ล้านบาท</div>
                             </div>
                         </div>
                     </div>
@@ -354,15 +348,15 @@
                         <div class="card-body p-0">
                             <div class="text-white p-3" style="background-color: #590F23;">
                                 <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center">
-                                    <img src="../images/file-invoice-dollar-solid.svg"
-                                        alt="file-invoice-dollar Icon" class="img-fluid mb-2 mb-sm-0 mx-auto mx-sm-3"
+                                    <img src="../images/file-invoice-dollar-solid.svg" alt="file-invoice-dollar Icon"
+                                        class="img-fluid mb-2 mb-sm-0 mx-auto mx-sm-3"
                                         style="width: 40px; height: 40px; filter: brightness(0) invert(1);">
-                                    <h2 class="title h4 mb-0 text-center text-sm-start w-100">คำขอตั้งปีงบประมาณปี 2567
-                                    </h2>
+                                    <h3 class="h3 mb-0 text-center text-sm-start w-100">คำขอตั้งปีงบประมาณปี 2567
+                                    </h3>
                                 </div>
                             </div>
-                            <div class="p-3 text-center">
-                                <div class="amount h2 mb-0" style="color: #590F23;">25,000 ล้านบาท</div>
+                            <div class="card-content p-3 text-center">
+                                <div class="h1 mb-0" style="color: #590F23;">25,000 ล้านบาท</div>
                             </div>
                         </div>
                     </div>
@@ -386,7 +380,7 @@
                     <div id="bar-compare-expense-by-type-year" style="min-height: 700px;"></div>
                 </div>
             </div>
-            
+
             <div class="row">
                 <!-- การ์ดค่าใช้จ่ายบุคคล -->
                 <div class="col mb-4">
@@ -397,11 +391,11 @@
                                     <img src="../images/user-solid.svg" alt="user Icon"
                                         class="img-fluid mb-2 mb-sm-0 mx-auto mx-sm-3"
                                         style="width: 30px; height: 30px; filter: brightness(0) invert(1);">
-                                    <h2 class="h4 mb-0 text-center text-sm-start w-100">ค่าใช้จ่ายบุคคล</h2>
+                                    <h3 class="h4 mb-0 text-center text-sm-start w-100">ค่าใช้จ่ายบุคคล</h3>
                                 </div>
                             </div>
-                            <div class="p-3 text-center">
-                                <div class="amount h2 mb-0" style="color: #26151B;">20,000 ล้านบาท</div>
+                            <div class="card-content p-3 text-center">
+                                <div class="h2 mb-0" style="color: #26151B;">20,000 ล้านบาท</div>
                             </div>
                         </div>
                     </div>
@@ -416,11 +410,11 @@
                                     <img src="../images/file-lines-solid.svg" alt="file-lines-solid Icon"
                                         class="img-fluid mb-2 mb-sm-0 mx-auto mx-sm-3"
                                         style="width: 30px; height: 30px; filter: brightness(0) invert(1);">
-                                    <h2 class="h4 mb-0 text-center text-sm-start w-100">ค่าใช้จ่ายดำเนินการ</h2>
+                                    <h3 class="h4 mb-0 text-center text-sm-start w-100">ค่าใช้จ่ายดำเนินการ</h3>
                                 </div>
                             </div>
-                            <div class="p-3 text-center">
-                                <div class="amount h2 mb-0" style="color: #44557D;">10,000 ล้านบาท</div>
+                            <div class="card-content p-3 text-center">
+                                <div class="h2 mb-0" style="color: #44557D;">10,000 ล้านบาท</div>
                             </div>
                         </div>
                     </div>
@@ -435,16 +429,16 @@
                                     <img src="../images/toolbox-solid.svg" alt="toolbox-solid Icon"
                                         class="img-fluid mb-2 mb-sm-0 mx-auto mx-sm-3"
                                         style="width: 30px; height: 30px; filter: brightness(0) invert(1);">
-                                    <h2 class="h4 mb-0 text-center text-sm-start w-100">ค่าครุภัณฑ์</h2>
+                                    <h3 class="h4 mb-0 text-center text-sm-start w-100">ค่าครุภัณฑ์</h3>
                                 </div>
                             </div>
-                            <div class="p-3 text-center">
-                                <div class="amount h2 mb-0" style="color: #315948;">13,000 ล้านบาท</div>
+                            <div class="card-content p-3 text-center">
+                                <div class="h2 mb-0" style="color: #315948;">13,000 ล้านบาท</div>
                             </div>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- การ์ดค่าที่ดินก่อสร้าง -->
                 <div class="col mb-4">
                     <div class="card shadow-sm h-100" style="overflow: hidden;">
@@ -454,17 +448,17 @@
                                     <img src="../images/building-solid.svg" alt="building-solid Icon"
                                         class="img-fluid mb-2 mb-sm-0 mx-auto mx-sm-3"
                                         style="width: 30px; height: 30px; filter: brightness(0) invert(1);">
-                                    <h2 class="h4 mb-0 text-center text-sm-start w-100">ค่าที่ดินก่อสร้าง</h2>
+                                    <h3 class="h4 mb-0 text-center text-sm-start w-100">ค่าที่ดินก่อสร้าง</h3>
                                 </div>
                             </div>
-                            <div class="p-3 text-center">
-                                <div class="amount h2 mb-0" style="color: #7C696D;">13,000 ล้านบาท</div>
+                            <div class="card-content p-3 text-center">
+                                <div class="h2 mb-0" style="color: #7C696D;">13,000 ล้านบาท</div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                
+
                 <!-- การ์ดค่าอื่นๆ -->
                 <div class="col mb-4">
                     <div class="card shadow-sm h-100" style="overflow: hidden;">
@@ -474,22 +468,356 @@
                                     <img src="../images/window-restore-solid.svg" alt="window-restore-solid Icon"
                                         class="img-fluid mb-2 mb-sm-0 mx-auto mx-sm-3"
                                         style="width: 30px; height: 30px; filter: brightness(0) invert(1);">
-                                    <h2 class="h4 mb-0 text-center text-sm-start w-100">ค่าอื่นๆ</h2>
+                                    <h3 class="h4 mb-0 text-center text-sm-start w-100">ค่าอื่นๆ</h3>
                                 </div>
                             </div>
-                            <div class="p-3 text-center">
-                                <div class="amount h2 mb-0" style="color: #888C8B;">13,000 ล้านบาท</div>
+                            <div class="card-content p-3 text-center">
+                                <div class="h2 mb-0" style="color: #888C8B;">13,000 ล้านบาท</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <!-- แผนภูมิเปรียบเทียบใช้จ่ายตามประเภทรายจ่ายไตรมาส -->
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <div id="bar-compare-expense-by-type-quarter" style="min-height: 700px;"></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- การ์ดค่าใช้จ่ายบุคคล -->
+                <div class="col-3 mb-4">
+                    <div class="card shadow-sm h-100" style="overflow: hidden;">
+                        <div class="card-body p-0">
+                            <div class="text-white p-3" style="background-color: #26151B;">
+                                <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center">
+                                    <img src="../images/user-solid.svg" alt="user Icon"
+                                        class="img-fluid mb-2 mb-sm-0 mx-auto mx-sm-3"
+                                        style="width: 30px; height: 30px; filter: brightness(0) invert(1);">
+                                    <h3 class="h3 mb-0 text-center text-sm-start w-100">ค่าใช้จ่ายบุคคล</h3>
+                                </div>
+                            </div>
+                            <div class="card-content p-3 text-center">
+                                <div class="h2 mb-0" style="color: #26151B;">20,000 ล้านบาท</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- การ์ดค่าใช้จ่ายดำเนินการ -->
+                <div class="col-3 mb-4">
+                    <div class="card shadow-sm h-100" style="overflow: hidden;">
+                        <div class="card-body p-0">
+                            <div class="text-white p-3" style="background-color: #44557D;">
+                                <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center">
+                                    <img src="../images/file-lines-solid.svg" alt="file-lines-solid Icon"
+                                        class="img-fluid mb-2 mb-sm-0 mx-auto mx-sm-3"
+                                        style="width: 30px; height: 30px; filter: brightness(0) invert(1);">
+                                    <h3 class="h3 mb-0 text-center text-sm-start w-100">ค่าใช้จ่ายดำเนินการ</h3>
+                                </div>
+                            </div>
+                            <div class="card-content p-3 text-center">
+                                <div class="h2 mb-0" style="color: #44557D;">10,000 ล้านบาท</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- การ์ดค่าครุภัณฑ์ -->
+                <div class="col-3 mb-4">
+                    <div class="card shadow-sm h-100" style="overflow: hidden;">
+                        <div class="card-body p-0">
+                            <div class="text-white p-3" style="background-color: #315948;">
+                                <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center">
+                                    <img src="../images/toolbox-solid.svg" alt="toolbox-solid Icon"
+                                        class="img-fluid mb-2 mb-sm-0 mx-auto mx-sm-3"
+                                        style="width: 30px; height: 30px; filter: brightness(0) invert(1);">
+                                    <h3 class="h3 mb-0 text-center text-sm-start w-100">ค่าครุภัณฑ์</h3>
+                                </div>
+                            </div>
+                            <div class="card-content p-3 text-center">
+                                <div class="h2 mb-0" style="color: #315948;">13,000 ล้านบาท</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- การ์ดค่าที่ดินก่อสร้าง -->
+                <div class="col-3 mb-4">
+                    <div class="card shadow-sm h-100" style="overflow: hidden;">
+                        <div class="card-body p-0">
+                            <div class="text-white p-3" style="background-color: #7C696D;">
+                                <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center">
+                                    <img src="../images/building-solid.svg" alt="building-solid Icon"
+                                        class="img-fluid mb-2 mb-sm-0 mx-auto mx-sm-3"
+                                        style="width: 30px; height: 30px; filter: brightness(0) invert(1);">
+                                    <h3 class="h3 mb-0 text-center text-sm-start w-100">ค่าที่ดินก่อสร้าง</h3>
+                                </div>
+                            </div>
+                            <div class="card-content p-3 text-center">
+                                <div class="h2 mb-0" style="color: #7C696D;">13,000 ล้านบาท</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
+        <!-- ตารางแสดงการใช้จ่ายงบประมาณรายไตรมาสของปีงบประมาณ 2568 เปรียบเทียบย้อนหลัง 2 ปี -->
+        <h2 class="my-2">ตารางแสดงการใช้จ่ายงบประมาณรายไตรมาสของปีงบประมาณ 2568 เปรียบเทียบย้อนหลัง 2 ปี</h2>
+        <section>
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered mb-0">
+                            <thead>
+                                <tr class="text-white" style="background-color: #590F23;">
+                                    <th class="align-middle text-center">ปีงบประมาณ/ไตรมาส</th>
+                                    <th class="align-middle text-center">แผนเบิกจ่าย (ร้อยละ)</th>
+                                    <th class="align-middle text-center">ได้รับจัดสรร</th>
+                                    <th class="align-middle text-center">เบิกจ่าย</th>
+                                    <th class="align-middle text-center">คงเหลือ</th>
+                                    <th class="align-middle text-center">ผลเบิกจ่าย (ร้อยละ)</th>
+                                    <th class="align-middle text-center">ผลต่าง แผน/ผล (ร้อยละ)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan="7">ไตรมาสที่ 1</td>
+                                </tr>
+                                <tr>
+                                    <td>2567</td>
+                                    <td class="text-end">66.57</td>
+                                    <td class="text-end">293,193,600.00</td>
+                                    <td class="text-end">0.00</td>
+                                    <td class="text-end">293,193,600.00</td>
+                                    <td class="text-end">0.00</td>
+                                    <td class="text-end">-66.57 ▲</td>
+                                </tr>
+                                <tr>
+                                    <td>2568</td>
+                                    <td class="text-end">0.00</td>
+                                    <td class="text-end">0.00</td>
+                                    <td class="text-end">0.00</td>
+                                    <td class="text-end">0.00</td>
+                                    <td class="text-end">0.00</td>
+                                    <td class="text-end">0.00 ▼</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="7">ไตรมาสที่ 2</td>
+                                </tr>
+                                <tr>
+                                    <td>2567</td>
+                                    <td class="text-end">13.31</td>
+                                    <td class="text-end">293,193,600.00</td>
+                                    <td class="text-end">0.00</td>
+                                    <td class="text-end">293,193,600.00</td>
+                                    <td class="text-end">0.00</td>
+                                    <td class="text-end">-13.31 ▲</td>
+                                </tr>
+                                <tr>
+                                    <td>2568</td>
+                                    <td class="text-end">0.00</td>
+                                    <td class="text-end">0.00</td>
+                                    <td class="text-end">0.00</td>
+                                    <td class="text-end">0.00</td>
+                                    <td class="text-end">0.00</td>
+                                    <td class="text-end">0.00 ▼</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="7">ไตรมาสที่ 3</td>
+                                </tr>
+                                <tr>
+                                    <td>2567</td>
+                                    <td class="text-end">13.31</td>
+                                    <td class="text-end">293,193,600.00</td>
+                                    <td class="text-end">0.00</td>
+                                    <td class="text-end">293,193,600.00</td>
+                                    <td class="text-end">0.00</td>
+                                    <td class="text-end">-13.31 ▲</td>
+                                </tr>
+                                <tr>
+                                    <td>2568</td>
+                                    <td class="text-end">0.00</td>
+                                    <td class="text-end">0.00</td>
+                                    <td class="text-end">0.00</td>
+                                    <td class="text-end">0.00</td>
+                                    <td class="text-end">0.00</td>
+                                    <td class="text-end">0.00 ▼</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="7">ไตรมาสที่ 4</td>
+                                </tr>
+                                <tr>
+                                    <td>2567</td>
+                                    <td class="text-end">39.94</td>
+                                    <td class="text-end">293,193,600.00</td>
+                                    <td class="text-end">0.00</td>
+                                    <td class="text-end">293,193,600.00</td>
+                                    <td class="text-end">0.00</td>
+                                    <td class="text-end">-39.94 ▲</td>
+                                </tr>
+                                <tr>
+                                    <td>2568</td>
+                                    <td class="text-end">0.00</td>
+                                    <td class="text-end">0.00</td>
+                                    <td class="text-end">0.00</td>
+                                    <td class="text-end">0.00</td>
+                                    <td class="text-end">0.00</td>
+                                    <td class="text-end">0.00 ▼</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+                    <!-- แผนภูมิเปรียบเทียบใช้จ่ายตามประเภทรายจ่ายไตรมาส -->
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-body">
+                            <div id="area-compare-month-spending" style="min-height: 500px;"></div>
+                        </div>
+                    </div>
+        
+                    <div class="row">
+                        <!-- การ์ดค่าใช้จ่ายสูงสุด -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card shadow-sm h-100" style="overflow: hidden;">
+                                <div class="card-body p-0">
+                                    <div class="text-white p-3" style="background-color: #590F23;">
+                                        <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center">
+                                            <img src="../images/file-invoice-dollar-solid.svg" 
+                                                 alt="file-invoice-dollar Icon" 
+                                                 class="img-fluid mb-2 mb-sm-0 mx-auto mx-sm-3" 
+                                                 style="width: 40px; height: 40px; filter: brightness(0) invert(1);">
+                                            <h2 class="h2 mb-0 text-center text-sm-start w-100">ค่าใช้จ่ายสูงสุดปี 2567</h2>
+                                        </div>
+                                    </div>
+                                    <div class="card-content p-3 text-center">
+                                        <div class="h1 mb-0" style="color: #590F23;">155 ล้านบาท</div>
+                                        <div class="h2 " style="color: #590F23;">(เดือน กุมภาพันธ์)</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <!-- การ์ดค่าใช้จ่ายต่ำสุด -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card shadow-sm h-100" style="overflow: hidden;">
+                                <div class="card-body p-0">
+                                    <div class="text-white p-3" style="background-color: #8A0C27;">
+                                        <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center">
+                                            <img src="../images/credit-card-regular.svg" 
+                                                 alt="credit-card Icon" 
+                                                 class="img-fluid mb-2 mb-sm-0 mx-auto mx-sm-3" 
+                                                 style="width: 40px; height: 40px; filter: brightness(0) invert(1);">
+                                            <h2 class="h2 mb-0 text-center text-sm-start w-100">ค่าใช้จ่ายต่ำสุดปี 2567</h2>
+                                        </div>
+                                    </div>
+                                    <div class="card-content p-3 text-center">
+                                        <div class="h1 mb-0" style="color: #8A0C27;">50 ล้านบาท</div>
+                                        <div class="h2 " style="color: #8A0C27;">(เดือน มิถุนายน)</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <!-- การ์ดค่าใช้จ่ายเฉลี่ย -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card shadow-sm h-100" style="overflow: hidden;">
+                                <div class="card-body p-0">
+                                    <div class="text-white p-3" style="background-color: #2F5259;">
+                                        <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center">
+                                            <img src="../images/money-bill-1-regular.svg" 
+                                                 alt="money-bill Icon" 
+                                                 class="img-fluid mb-2 mb-sm-0 mx-auto mx-sm-3" 
+                                                 style="width: 40px; height: 40px; filter: brightness(0) invert(1);">
+                                            <h2 class="h2 mb-0 text-center text-sm-start w-100">ค่าใช้จ่ายเฉลี่ยปี 2567</h2>
+                                        </div>
+                                    </div>
+                                    <div class="card-content p-3 text-center">
+                                        <div class="h1 mb-0" style="color: #2F5259;">75 ล้านบาท</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <!-- การ์ดค่าใช้จ่ายสูงสุด -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card shadow-sm h-100" style="overflow: hidden;">
+                                <div class="card-body p-0">
+                                    <div class="text-white p-3" style="background-color: #590F23;">
+                                        <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center">
+                                            <img src="../images/file-invoice-dollar-solid.svg" 
+                                                 alt="file-invoice-dollar Icon" 
+                                                 class="img-fluid mb-2 mb-sm-0 mx-auto mx-sm-3" 
+                                                 style="width: 40px; height: 40px; filter: brightness(0) invert(1);">
+                                            <h2 class="h2 mb-0 text-center text-sm-start w-100">ค่าใช้จ่ายสูงสุด ปี 2568</h2>
+                                        </div>
+                                    </div>
+                                    <div class="card-content p-3 text-center">
+                                        <div class="h1 mb-0" style="color: #590F23;">200 ล้านบาท</div>
+                                        <div class="h2 " style="color: #590F23;">(เดือน กุมภาพันธ์)</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <!-- การ์ดค่าใช้จ่ายต่ำสุด -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card shadow-sm h-100" style="overflow: hidden;">
+                                <div class="card-body p-0">
+                                    <div class="text-white p-3" style="background-color: #8A0C27;">
+                                        <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center">
+                                            <img src="../images/credit-card-regular.svg" 
+                                                 alt="credit-card Icon" 
+                                                 class="img-fluid mb-2 mb-sm-0 mx-auto mx-sm-3" 
+                                                 style="width: 40px; height: 40px; filter: brightness(0) invert(1);">
+                                            <h2 class="h2 mb-0 text-center text-sm-start w-100">ค่าใช้จ่ายต่ำสุด ปี 2568</h2>
+                                        </div>
+                                    </div>
+                                    <div class="card-content p-3 text-center">
+                                        <div class="h1 mb-0" style="color: #8A0C27;">60 ล้านบาท</div>
+                                        <div class="h2 " style="color: #8A0C27;">(เดือน มกราคม, กรกฎาคม)</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <!-- การ์ดค่าใช้จ่ายเฉลี่ย -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card shadow-sm h-100" style="overflow: hidden;">
+                                <div class="card-body p-0">
+                                    <div class="text-white p-3" style="background-color: #2F5259;">
+                                        <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center">
+                                            <img src="../images/money-bill-1-regular.svg" 
+                                                 alt="money-bill Icon" 
+                                                 class="img-fluid mb-2 mb-sm-0 mx-auto mx-sm-3" 
+                                                 style="width: 40px; height: 40px; filter: brightness(0) invert(1);">
+                                            <h2 class="h2 mb-0 text-center text-sm-start w-100">ค่าใช้จ่ายเฉลี่ย ปี 2568 </h2>
+                                        </div>
+                                    </div>
+                                    <div class="card-content p-3 text-center">
+                                        <div class="h1 mb-0" style="color: #2F5259;">85 ล้านบาท</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+        
     </div>
 
     <!-- Scripts -->
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+
     <script src="../js/highcharts.js"></script>
     <script src="../js/exporting.js"></script>
     <script src="../js/accessibility.js"></script>
@@ -500,5 +828,8 @@
     <script src="bar-compare-disbursement.js"></script>
     <script src="bar-compare-budget-request.js"></script>
     <script src="bar-compare-expense-by-type-year.js"></script>
+    <script src="bar-compare-expense-by-type-quarter.js"></script>
+    <script src="area-compare-month-spending.js"></script>
 </body>
+
 </html>
