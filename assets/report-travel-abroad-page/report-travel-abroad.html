@@ -12,20 +12,6 @@
 <body>
     <!-- Navbar -->
     <div id="navbar-placeholder"></div>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            fetch('../../navbar.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('navbar-placeholder').innerHTML = data;
-                    // Re-initialize Bootstrap components
-                    var dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'))
-                    var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
-                        return new bootstrap.Dropdown(dropdownToggleEl)
-                    })
-                });
-        });
-    </script>
 
     <h1 class="text-center">รายงานการเดินทางไปต่างประเทศ</h1>
     <div class="container-fluid py-4">
@@ -46,7 +32,7 @@
                                     <h2 class="h1 mb-0 text-center text-sm-start w-100">งบประมาณที่ได้รับ</h2>
                                 </div>
                             </div>
-                            <div class="card-content p-3 text-center">
+                            <div class=" p-3 text-center">
                                 <div class="h1 mb-0" style="color: #590F23; font-weight: bold;">100,000 ล้านบาท</div>
                             </div>
                         </div>
@@ -63,7 +49,7 @@
                                     <h2 class="h1 mb-0 text-center text-sm-start w-100">ใช้ไปแล้ว</h2>
                                 </div>
                             </div>
-                            <div class="card-content p-3 text-center">
+                            <div class=" p-3 text-center">
                                 <div class="h1 mb-0" style="color: #313F59;">60,000 ล้านบาท</div>
                                 <div class="h2" style="color: #313F59;">(คิดเป็นร้อยละ 60)</div>
                             </div>
@@ -81,7 +67,7 @@
                                     <h2 class="h1 mb-0 text-center text-sm-start w-100">คงเหลือ</h2>
                                 </div>
                             </div>
-                            <div class="card-content p-3 text-center">
+                            <div class=" p-3 text-center">
                                 <div class="h1 mb-0" style="color: #2F5259;">40,000 ล้านบาท</div>
                             </div>
                         </div>
@@ -116,7 +102,7 @@
                                     <h3 class="h2 mb-0 text-center text-sm-start w-100">ส่วนต่างงบประมาณ</h3>
                                 </div>
                             </div>
-                            <div class="card-content p-3 text-center">
+                            <div class=" p-3 text-center">
                                 <div class="h1 mb-0" style="color: #590F23;">17,000 ล้านบาท</div>
                             </div>
                         </div>
@@ -135,7 +121,7 @@
                                     <h3 class="h2 mb-0 text-center text-sm-start w-100">ส่วนต่างเบิกจ่าย</h3>
                                 </div>
                             </div>
-                            <div class="card-content p-3 text-center">
+                            <div class=" p-3 text-center">
                                 <div class="h1 mb-0" style="color: #8A0C27;">8,700 ล้านบาท</div>
                                 <div class="h2" style="color: #8A0C27;">(คิดเป็นร้อยละ 18)</div>
                             </div>
@@ -155,7 +141,7 @@
                                     <h3 class="h2 mb-0 text-center text-sm-start w-100">ส่วนต่างคงเหลือ</h3>
                                 </div>
                             </div>
-                            <div class="card-content p-3 text-center">
+                            <div class=" p-3 text-center">
                                 <div class="h1 mb-0" style="color: #2F5259;">8,300 ล้านบาท</div>
                             </div>
                         </div>
@@ -188,7 +174,7 @@
                                     <h2 class="h1 mb-0 text-center text-sm-start w-100">งบประมาณที่ได้รับ</h2>
                                 </div>
                             </div>
-                            <div class="card-content p-3 text-center">
+                            <div class=" p-3 text-center">
                                 <div class="h1 mb-0" style="color: #590F23; font-weight: bold;">100,000 ล้านบาท</div>
                             </div>
                         </div>
@@ -205,7 +191,7 @@
                                     <h2 class="h1 mb-0 text-center text-sm-start w-100">ใช้ไปแล้ว</h2>
                                 </div>
                             </div>
-                            <div class="card-content p-3 text-center">
+                            <div class=" p-3 text-center">
                                 <div class="h1 mb-0" style="color: #313F59;">60,000 ล้านบาท</div>
                                 <div class="h2" style="color: #313F59;">(คิดเป็นร้อยละ 60)</div>
                             </div>
@@ -223,7 +209,7 @@
                                     <h2 class="h1 mb-0 text-center text-sm-start w-100">คงเหลือ</h2>
                                 </div>
                             </div>
-                            <div class="card-content p-3 text-center">
+                            <div class=" p-3 text-center">
                                 <div class="h1 mb-0" style="color: #2F5259;">40,000 ล้านบาท</div>
                             </div>
                         </div>
@@ -257,7 +243,7 @@
                                     <h3 class="h4 mb-0 text-center text-sm-start w-100">สำนักการต่างประเทศ</h3>
                                 </div>
                             </div>
-                            <div class="card-content p-3 text-center">
+                            <div class=" p-3 text-center">
                                 <div class="h2 mb-0" style="color: #26151B;">2,000 ล้านบาท</div>
                             </div>
                         </div>
@@ -276,7 +262,7 @@
                                     <h3 class="h4 mb-0 text-center text-sm-start w-100">สำนักกรรมาธิการ 1</h3>
                                 </div>
                             </div>
-                            <div class="card-content p-3 text-center">
+                            <div class=" p-3 text-center">
                                 <div class="h2 mb-0" style="color: #44557D;">1,000 ล้านบาท</div>
                             </div>
                         </div>
@@ -295,7 +281,7 @@
                                     <h3 class="h4 mb-0 text-center text-sm-start w-100">สำนักกรรมาธิการ 2</h3>
                                 </div>
                             </div>
-                            <div class="card-content p-3 text-center">
+                            <div class=" p-3 text-center">
                                 <div class="h2 mb-0" style="color: #315948;">1,300 ล้านบาท</div>
                             </div>
                         </div>
@@ -314,7 +300,7 @@
                                     <h3 class="h4 mb-0 text-center text-sm-start w-100">สำนักกรรมาธิการ 3</h3>
                                 </div>
                             </div>
-                            <div class="card-content p-3 text-center">
+                            <div class=" p-3 text-center">
                                 <div class="h2 mb-0" style="color: #7C696D;">1,400 ล้านบาท</div>
                             </div>
                         </div>
@@ -351,7 +337,7 @@
                                     <h2 class="h1 mb-0 text-center text-sm-start w-100">ค่าใช้จ่ายสูงสุด</h2>
                                 </div>
                             </div>
-                            <div class="card-content p-3 text-center">
+                            <div class=" p-3 text-center">
                                 <div class="h1 mb-0" style="color: #590F23;">6.8 ล้านบาท</div>
                                 <div class="h2 " style="color: #590F23;">(เดือน สิงหาคม)</div>
                             </div>
@@ -371,7 +357,7 @@
                                     <h2 class="h1 mb-0 text-center text-sm-start w-100">ค่าใช้จ่ายต่ำสุด</h2>
                                 </div>
                             </div>
-                            <div class="card-content p-3 text-center">
+                            <div class=" p-3 text-center">
                                 <div class="h1 mb-0" style="color: #8A0C27;">-3.2 ล้านบาท</div>
                                 <div class="h2 " style="color: #8A0C27;">(เดือน เมษายน)</div>
                             </div>
@@ -391,7 +377,7 @@
                                     <h2 class="h1 mb-0 text-center text-sm-start w-100">ค่าใช้จ่ายเฉลี่ย</h2>
                                 </div>
                             </div>
-                            <div class="card-content p-3 text-center">
+                            <div class=" p-3 text-center">
                                 <div class="h1 mb-0" style="color: #2F5259;">4.2 ล้านบาท</div>
                             </div>
                         </div>
@@ -402,6 +388,7 @@
     </div>
 
     <!-- Scripts -->
+    <script src="../js/navbar.js"></script>
     <script src="../js/jquery-3.7.1.min.js"></script>
     <script src="../js/bootstrap.bundle.min.js"></script>
 

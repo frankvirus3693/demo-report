@@ -1,8 +1,8 @@
 Highcharts.setOptions({
     chart: {
         style: {
-            fontFamily: 'THSARABUNNEW, sans-serif',
-            fontSize: '24px'
+            fontFamily: 'Sarabun-Regular, sans-serif',
+             fontSize: '24px'
         }
     }
 });

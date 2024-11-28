@@ -12,22 +12,8 @@
 <body>
     <!-- Navbar -->
     <div id="navbar-placeholder"></div>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            fetch('../../navbar.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('navbar-placeholder').innerHTML = data;
-                    // Re-initialize Bootstrap components
-                    var dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'))
-                    var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
-                        return new bootstrap.Dropdown(dropdownToggleEl)
-                    })
-                });
-        });
-    </script>
 
-    <h1 class="text-center">รายงานเปรียบเทียบงบประมาณที่ได้รับการใช้เงินงบประมาณและยอดคงเหลือ</h1>
+    <h1 class="head-title mt-4 text-center">รายงานเปรียบเทียบงบประมาณที่ได้รับการใช้เงินงบประมาณและยอดคงเหลือ</h1>
     <div class="container-fluid py-4">
         <!-- งบประมาณและแผนภูมิภาพรวมปี 2567-2568 -->
         <h2 class="mb-2">งบประมาณและแผนภูมิภาพรวมปี 2567-2568</h2>
@@ -46,7 +32,7 @@
                                     </h3>
                                 </div>
                             </div>
-                            <div class="card-content p-3 text-center">
+                            <div class=" p-3 text-center">
                                 <div class="h1 mb-0" style="color: #590F23;">30,000 ล้านบาท</div>
                             </div>
                         </div>
@@ -65,7 +51,7 @@
                                     <h3 class="h3 mb-0 text-center text-sm-start w-100">เบิกจ่าย (ปี 2567)</h3>
                                 </div>
                             </div>
-                            <div class="card-content p-3 text-center">
+                            <div class=" p-3 text-center">
                                 <div class="h1 mb-0" style="color: #8A0C27;">10,000 ล้านบาท</div>
                                 <div class="h2" style="color: #8A0C27;">(คิดเป็นร้อยละ 33)</div>
                             </div>
@@ -85,7 +71,7 @@
                                     <h3 class="h3 mb-0 text-center text-sm-start w-100">คงเหลือ (ปี 2567)</h3>
                                 </div>
                             </div>
-                            <div class="card-content p-3 text-center">
+                            <div class=" p-3 text-center">
                                 <div class="h1 mb-0" style="color: #2F5259;">20,000 ล้านบาท</div>
                             </div>
                         </div>
@@ -107,7 +93,7 @@
                                     </h3>
                                 </div>
                             </div>
-                            <div class="card-content p-3 text-center">
+                            <div class=" p-3 text-center">
                                 <div class="h1 mb-0" style="color: #590F23;">13,000 ล้านบาท</div>
                             </div>
                         </div>
@@ -126,7 +112,7 @@
                                     <h3 class="h3 mb-0 text-center text-sm-start w-100">เบิกจ่าย (ปี 2568)</h3>
                                 </div>
                             </div>
-                            <div class="card-content p-3 text-center">
+                            <div class=" p-3 text-center">
                                 <div class="h1 mb-0" style="color: #8A0C27;">1,300 ล้านบาท</div>
                                 <div class="h2" style="color: #8A0C27;">(คิดเป็นร้อยละ 10)</div>
                             </div>
@@ -146,7 +132,7 @@
                                     <h3 class="h3 mb-0 text-center text-sm-start w-100">คงเหลือ (ปี 2568)</h3>
                                 </div>
                             </div>
-                            <div class="card-content p-3 text-center">
+                            <div class=" p-3 text-center">
                                 <div class="h1 mb-0" style="color: #2F5259;">11,700 ล้านบาท</div>
                             </div>
                         </div>
@@ -192,7 +178,7 @@
                                     <h3 class="h2 mb-0 text-center text-sm-start w-100">ส่วนต่างงบประมาณ</h3>
                                 </div>
                             </div>
-                            <div class="card-content p-3 text-center">
+                            <div class=" p-3 text-center">
                                 <div class="h1 mb-0" style="color: #590F23;">17,000 ล้านบาท</div>
                             </div>
                         </div>
@@ -211,7 +197,7 @@
                                     <h3 class="h2 mb-0 text-center text-sm-start w-100">ส่วนต่างเบิกจ่าย</h3>
                                 </div>
                             </div>
-                            <div class="card-content p-3 text-center">
+                            <div class=" p-3 text-center">
                                 <div class="h1 mb-0" style="color: #8A0C27;">8,700 ล้านบาท</div>
                                 <div class="h2" style="color: #8A0C27;">(คิดเป็นร้อยละ 18)</div>
                             </div>
@@ -231,7 +217,7 @@
                                     <h3 class="h2 mb-0 text-center text-sm-start w-100">ส่วนต่างคงเหลือ</h3>
                                 </div>
                             </div>
-                            <div class="card-content p-3 text-center">
+                            <div class=" p-3 text-center">
                                 <div class="h1 mb-0" style="color: #2F5259;">8,300 ล้านบาท</div>
                             </div>
                         </div>
@@ -264,7 +250,7 @@
                                     <h3 class="h2 mb-0 text-center text-sm-start w-100">งบที่ได้รับจัดสรร</h3>
                                 </div>
                             </div>
-                            <div class="card-content p-3 text-center">
+                            <div class=" p-3 text-center">
                                 <div class="h1 mb-0" style="color: #590F23;">17,000 ล้านบาท</div>
                             </div>
                         </div>
@@ -283,7 +269,7 @@
                                     <h3 class="h2 mb-0 text-center text-sm-start w-100">เบิกจ่าย (2567)</h3>
                                 </div>
                             </div>
-                            <div class="card-content p-3 text-center">
+                            <div class=" p-3 text-center">
                                 <div class="h1 mb-0" style="color: #8A0C27;">8,700 ล้านบาท</div>
                                 <div class="h2" style="color: #8A0C27;">(คิดเป็นร้อยละ 18)</div>
                             </div>
@@ -303,7 +289,7 @@
                                     <h3 class="h2 mb-0 text-center text-sm-start w-100">คงเหลือ (ปี 2567)</h3>
                                 </div>
                             </div>
-                            <div class="card-content p-3 text-center">
+                            <div class=" p-3 text-center">
                                 <div class="h1 mb-0" style="color: #2F5259;">8,300 ล้านบาท</div>
                             </div>
                         </div>
@@ -336,7 +322,7 @@
                                     <h3 class="h2 mb-0 text-center text-sm-start w-100">งบที่ได้รับจัดสรร</h3>
                                 </div>
                             </div>
-                            <div class="card-content p-3 text-center">
+                            <div class=" p-3 text-center">
                                 <div class="h1 mb-0" style="color: #590F23;">17,000 ล้านบาท</div>
                             </div>
                         </div>
@@ -355,7 +341,7 @@
                                     <h3 class="h2 mb-0 text-center text-sm-start w-100">เบิกจ่าย (2567)</h3>
                                 </div>
                             </div>
-                            <div class="card-content p-3 text-center">
+                            <div class=" p-3 text-center">
                                 <div class="h1 mb-0" style="color: #8A0C27;">8,700 ล้านบาท</div>
                                 <div class="h2" style="color: #8A0C27;">(คิดเป็นร้อยละ 18)</div>
                             </div>
@@ -375,7 +361,7 @@
                                     <h3 class="h2 mb-0 text-center text-sm-start w-100">คงเหลือ (ปี 2567)</h3>
                                 </div>
                             </div>
-                            <div class="card-content p-3 text-center">
+                            <div class=" p-3 text-center">
                                 <div class="h1 mb-0" style="color: #2F5259;">8,300 ล้านบาท</div>
                             </div>
                         </div>
@@ -394,6 +380,7 @@
     </div>
 
     <!-- Scripts -->
+    <script src="../js/navbar.js"></script>
     <script src="../js/jquery-3.7.1.min.js"></script>
     <script src="../js/bootstrap.bundle.min.js"></script>
 

@@ -1,7 +1,8 @@
+
 Highcharts.setOptions({
     chart: {
         style: {
-            fontFamily: 'THSARABUNNEW, sans-serif',
+            fontFamily: 'Sarabun-Regular, sans-serif',
              fontSize: '24px'
         }
     }
@@ -51,7 +52,7 @@ Highcharts.chart('chart-overall-budget', {
         }
     },
     title: {
-        text: 'แผนภูมิแสดงงบโครงการ',
+        text: 'แผนภูมิแสดงงบประมาณภาพรวม',
     },
     tooltip: {
         pointFormat: '{series.name}: <b>{point.percentage:.0f}%</b>'

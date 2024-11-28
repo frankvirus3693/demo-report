@@ -1,7 +1,8 @@
+
 Highcharts.setOptions({
     chart: {
         style: {
-            fontFamily: 'THSARABUNNEW, sans-serif',
+            fontFamily: 'Sarabun-Regular, sans-serif',
              fontSize: '24px'
         }
     }

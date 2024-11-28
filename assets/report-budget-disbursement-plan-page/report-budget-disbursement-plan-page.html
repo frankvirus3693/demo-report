@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>รายงานสถานะการเบิกจ่ายงบประมาณจำแนกตามยุทธศาสตร์/แผนงาน</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div id="navbar-placeholder"></div>
+
+    <h1 class="head-title mt-4 text-center">รายงานสถานะการเบิกจ่ายงบประมาณจำแนกตามยุทธศาสตร์/แผนงาน</h1>
+    <div class="container-fluid py-4">
+        <!-- แผนภูมิรายงานสรุปผลการเบิกจ่ายงบประมาณ จำแนกตามยุทธศาสตร์ชาติ/แผนงาน -->
+        <h2 class="my-2">แผนภูมิรายงานสรุปผลการเบิกจ่ายงบประมาณ จำแนกตามยุทธศาสตร์ชาติ/แผนงาน</h2>
+        <section>
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered mb-0">
+                            <thead>
+                                <tr class="text-white" style="background-color: #590F23;">
+                                    <th class="align-middle text-center">ยุทธศาสตร์/แผนงาน</th>
+                                    <th class="align-middle text-center">งบประมาณ<br>(พ.ศ.2568)</th>
+                                    <th class="align-middle text-center">โอนเปลี่ยนแปลง</th>
+                                    <th class="align-middle text-center">ใบสั่งซื้อ/สัญญา</th>
+                                    <th class="align-middle text-center">เบิกจ่าย ข้อมูล ณ วันที่</th>
+                                    <th class="align-middle text-center">คงเหลือ</th>
+                                    <th class="align-middle text-center">เบิกจ่าย<br>ร้อยละ</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>แผนงานยุทธศาสตร์เพื่อสนับสนุนด้านการปรับสมดุลและพัฒนาระบบการบริหารจัดการภาครัฐ</td>
+                                    <td class="text-end">30,000,000,000.00</td>
+                                    <td class="text-end">12,000,000,000.00</td>
+                                    <td class="text-end">10,000,000,000.00</td>
+                                    <td class="text-end">3,000,000,000.00</td>
+                                    <td class="text-end">5,000,000,000.00</td>
+                                    <td class="text-end">10.00</td>
+                                </tr>
+                                <tr>
+                                    <td>แผนงานพื้นฐานด้านการปรับสมดุลและพัฒนาระบบบริหารจัดการภาครัฐ</td>
+                                    <td class="text-end">20,000,000,000.00</td>
+                                    <td class="text-end">8,000,000,000.00</td>
+                                    <td class="text-end">8,000,000,000.00</td>
+                                    <td class="text-end">5,000,000,000.00</td>
+                                    <td class="text-end">1,000,000,000.00</td>
+                                    <td class="text-end">25.00</td>
+                                </tr>
+                                <tr>
+                                    <td>แผนงานบุคลากรภาครัฐ</td>
+                                    <td class="text-end">10,000,000,000.00</td>
+                                    <td class="text-end">6,500,000,000.00</td>
+                                    <td class="text-end">1,500,000,000.00</td>
+                                    <td class="text-end">1,000,000,000.00</td>
+                                    <td class="text-end">1,000,000,000.00</td>
+                                    <td class="text-end">10.00</td>
+                                </tr>
+                                <tr>
+                                    <td>แผนงานยุทธศาสตร์พัฒนาสนับสนุนและเสริมสร้างการเมืองในระบอบประชาธิปไตยอันมีพระมหากษัตริย์ทรงเป็นประมุข</td>
+                                    <td class="text-end">10,000,000,000.00</td>
+                                    <td class="text-end">4,000,000,000.00</td>
+                                    <td class="text-end">2,500,000,000.00</td>
+                                    <td class="text-end">2,000,000,000.00</td>
+                                    <td class="text-end">1,500,000,000.00</td>
+                                    <td class="text-end">20.00</td>
+                                </tr>
+                                <tr style="background-color: #d3d3d3;">
+                                    <td class="text-center">รวม</td>
+                                    <td class="text-end">70,000,000,000.00</td>
+                                    <td class="text-end">30,500,000,000.00</td>
+                                    <td class="text-end">22,000,000,000.00</td>
+                                    <td class="text-end">11,000,000,000.00</td>
+                                    <td class="text-end">6,500,000,000.00</td>
+                                    <td class="text-end">-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- แผนภูมิการใช้จ่ายงบประมาณตามยุทธศาสตร์/แผนงาน -->
+        <h2 class="my-2">แผนภูมิการใช้จ่ายงบประมาณตามยุทธศาสตร์/แผนงาน
+        </h2>
+        <section>
+            <div class="row">
+                <!-- งบที่ได้รับจัดสรร -->
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm h-100" style="overflow: hidden;">
+                        <div class="card-body p-0">
+                            <div class="text-white p-3" style="background-color: #590F23;">
+                                <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center">
+                                    <img src="../images/file-invoice-dollar-solid.svg" alt="file-invoice-dollar Icon"
+                                        class="img-fluid mb-2 mb-sm-0 mx-auto mx-sm-3"
+                                        style="width: 40px; height: 40px; filter: brightness(0) invert(1);">
+                                    <h3 class="h2 mb-0 text-center text-sm-start w-100">งบที่ได้รับจัดสรร
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class=" p-3 text-center">
+                                <div class="h1 mb-0" style="color: #590F23;">10,000 ล้านบาท</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- เบิกจ่ายแผนงานยุทธศาสตร์ -->
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm h-100" style="overflow: hidden;">
+                        <div class="card-body p-0">
+                            <div class="text-white p-3" style="background-color: #313F59;">
+                                <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center">
+                                    <img src="../images/credit-card-regular.svg" alt="credit-card Icon"
+                                        class="img-fluid mb-2 mb-sm-0 mx-auto mx-sm-3"
+                                        style="width: 40px; height: 40px; filter: brightness(0) invert(1);">
+                                    <h3 class="h2 mb-0 text-center text-sm-start w-100">เบิกจ่ายแผนงานยุทธศาสตร์</h3>
+                                </div>
+                            </div>
+                            <div class=" p-3 text-center">
+                                <div class="h1 mb-0" style="color: #313F59;">7400 ล้านบาท</div>
+                                <div class="h2" style="color: #313F59;">(คิดเป็นร้อยละ 74)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- เบิกจ่ายแผนงานพื้นฐาน -->
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm h-100" style="overflow: hidden;">
+                        <div class="card-body p-0">
+                            <div class="text-white p-3" style="background-color: #861727;">
+                                <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center">
+                                    <img src="../images/coins-solid.svg" alt="coin Icon"
+                                        class="img-fluid mb-2 mb-sm-0 mx-auto mx-sm-3"
+                                        style="width: 40px; height: 40px; filter: brightness(0) invert(1);">
+                                    <h3 class="h2 mb-0 text-center text-sm-start w-100">เบิกจ่ายแผนงานพื้นฐาน</h3>
+                                </div>
+                            </div>
+                            <div class=" p-3 text-center">
+                                <div class="h1 mb-0" style="color: #861727;">6,600 ล้านบาท</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- แผนภูมิแสดงส่วนต่างภาพรวมปี 2567-2568 -->
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <div id="bar-budget-spend-accord-plan" style="min-height: 700px;"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- แผนภูมิการใช้จ่ายงบประมาณตามยุทธศาสตร์/แผนงาน -->
+        <h2 class="my-2">แผนภูมิการใช้จ่ายงบประมาณตามยุทธศาสตร์/แผนงาน
+        </h2>
+        <section>
+            <!-- แผนภูมิแสดงส่วนต่างภาพรวมปี 2567-2568 -->
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <div id="bar-budget-request" style="min-height: 600px;"></div>
+                </div>
+            </div>
+        </section>
+
+        
+        <h2 class="my-2">แผนภูมิเปรียบเทียบคำขอตั้งงบประมาณ พ.ศ 2567-2568</h2>
+        <section>
+            <div class="row">
+                <!-- คำขอตั้งปีงบประมาณปี 2567 -->
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow-sm h-100" style="overflow: hidden;">
+                        <div class="card-body p-0">
+                            <div class="text-white p-3" style="background-color: #325948;">
+                                <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center">
+                                    <img src="../images/file-invoice-dollar-solid.svg" alt="file-invoice-dollar Icon"
+                                        class="img-fluid mb-2 mb-sm-0 mx-auto mx-sm-3"
+                                        style="width: 40px; height: 40px; filter: brightness(0) invert(1);">
+                                    <h3 class="h3 mb-0 text-center text-sm-start w-100">คำขอตั้งงบประมาณปี พ.ศ. 2567
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class=" p-3 text-center">
+                                <div class="h1 mb-0" style="color: #325948;">30,000 ล้านบาท</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- คำขอตั้งปีงบประมาณปี 2568 -->
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow-sm h-100" style="overflow: hidden;">
+                        <div class="card-body p-0">
+                            <div class="text-white p-3" style="background-color: #46547C;">
+                                <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center">
+                                    <img src="../images/file-invoice-dollar-solid.svg" alt="file-invoice-dollar Icon"
+                                        class="img-fluid mb-2 mb-sm-0 mx-auto mx-sm-3"
+                                        style="width: 40px; height: 40px; filter: brightness(0) invert(1);">
+                                    <h3 class="h3 mb-0 text-center text-sm-start w-100">คำขอตั้งงบประมาณปี พ.ศ. 2568
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class=" p-3 text-center">
+                                <div class="h1 mb-0" style="color: #46547C;">25,000 ล้านบาท</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- แผนภูมิเปรียบเทียบคำขอตั้งงบประมาณ -->
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <div id="bar-budget-request-comparison" style="min-height: 600px;"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- แผนภูมิรายงานสรุปผลการเบิกจ่ายงบประมาณ จำแนกตามยุทธศาสตร์ชาติ/แผนงาน -->
+        <h2 class="my-2">รายงานเปรียบเทียบคำขอตั้งงบประมาณ ระหว่าง พ.ศ. 2567 กับ 2568</h2>
+        <section>
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered mb-0">
+                            <thead>
+                                <tr class="text-white" style="background-color: #590F23;">
+                                    <th class="align-middle text-center">ยุทธศาสตร์/แผนงาน</th>
+                                    <th class="align-middle text-center">งำขอตั้ง<br>(พ.ศ.2567)</th>
+                                    <th class="align-middle text-center">ได้รับจัดสรร</th>
+                                    <th class="align-middle text-center">คำขอตั้ง<br>(พ.ศ.2568)</th>
+                                    <th class="align-middle text-center">ได้รับจัดสรร</th>
+                                    <th class="align-middle text-center">เพิ่ม/ลด คำขอตั้งปี 2566</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>แผนงานยุทธศาสตร์เพื่อสนับสนุนด้านการปรับสมดุลและพัฒนาระบบการบริหารจัดการภาครัฐ</td>
+                                    <td class="text-end">2,500,000,000.00</td>
+                                    <td class="text-end">2,500,000,000.00</td>
+                                    <td class="text-end">3,500,000,000.00</td>
+                                    <td class="text-end">3,000,000,000.00</td>
+                                    <td class="text-end">2,500,000,000.00</td>
+                                </tr>
+                                <tr>
+                                    <td>แผนงานพื้นฐานด้านการปรับสมดุลและพัฒนาระบบบริหารจัดการภาครัฐ</td>
+                                    <td class="text-end">3,500,000,000.00</td>
+                                    <td class="text-end">3,500,000,000.00</td>
+                                    <td class="text-end">2,300,000,000.00</td>
+                                    <td class="text-end">5,000,000,000.00</td>
+                                    <td class="text-end">3,500,000,000.00</td>
+                                </tr>
+                                <tr>
+                                    <td>แผนงานบุคลากรภาครัฐ</td>
+                                    <td class="text-end">3,000,000,000.00</td>
+                                    <td class="text-end">3,000,000,000.00</td>
+                                    <td class="text-end">2,000,000,000.00</td>
+                                    <td class="text-end">1,000,000,000.00</td>
+                                    <td class="text-end">3,000,000,000.00</td>
+                                </tr>
+                                <tr>
+                                    <td>แผนงานยุทธศาสตร์พัฒนาสนับสนุนและเสริมสร้างการเมืองในระบอบประชาธิปไตยอันมีพระมหากษัตริย์ทรงเป็นประมุข</td>
+                                    <td class="text-end">1,500,000,000.00</td>
+                                    <td class="text-end">1,500,000,000.00</td>
+                                    <td class="text-end">2,000,000,000.00</td>
+                                    <td class="text-end">2,000,000,000.00</td>
+                                    <td class="text-end">1,500,000,000.00</td>
+                                </tr>
+                                <tr style="background-color: #d3d3d3;">
+                                    <td class="text-center">รวม</td>
+                                    <td class="text-end">10,500,000,000.00</td>
+                                    <td class="text-end">10,500,000,000.00</td>
+                                    <td class="text-end">10,100,000,000.00</td>
+                                    <td class="text-end">11,000,000,000.00</td>
+                                    <td class="text-end">10,500,000,000.00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+                
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/navbar.js"></script>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    
+    <script src="../js/highcharts.js"></script>
+    <script src="../js/exporting.js"></script>
+    <script src="../js/accessibility.js"></script>
+    <script src="../js/chart.js"></script>
+    <script src="bar-budget-request.js"></script>
+    <script src="bar-budget-request-comparison.js"></script>
+    <script src="bar-budget-spend-accord-plan.js"></script>
+</body>
+
+</html>
