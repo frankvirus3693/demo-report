@@ -1,4 +1,4 @@
-Highcharts.chart('bar-project-status', {
+Highcharts.chart('column-project-status', {
     chart: {
         type: 'column'
     },

@@ -7,7 +7,7 @@ Highcharts.setOptions({
     }
 });
 
-Highcharts.chart('chart-expense-travel-foreign-visit', {
+Highcharts.chart('pie-overall-budget-difference', {
     chart: {
         type: 'pie',
         custom: {},
@@ -20,7 +20,7 @@ Highcharts.chart('chart-expense-travel-foreign-visit', {
                 if (!customLabel) {
                     customLabel = chart.options.chart.custom.label =
                         chart.renderer.label(
-                            '<strong>ค่ายใช้จ่าย</strong><br/><strong>การเดินทาง</strong><br><strong>ประชุมนานาชาติ</strong><span style="font-size: 1em;"></span></br>7,000,000,000</br>บาท'
+                            '<strong>ส่วนต่างงบ</strong><br/><strong style="font-size: 1em;">ประมาณภาพรวม</strong></br>17,000,000,000</br>บาท'
                         )
                             .css({
                                 color: '#000',
@@ -31,7 +31,7 @@ Highcharts.chart('chart-expense-travel-foreign-visit', {
 
                 const x = series.center[0] + chart.plotLeft,
                     y = series.center[1] + chart.plotTop -
-                    (customLabel.attr('height') /2);
+                    (customLabel.attr('height') / 2);
 
                 customLabel.attr({
                     x,
@@ -50,7 +50,7 @@ Highcharts.chart('chart-expense-travel-foreign-visit', {
         }
     },
     title: {
-        text: 'แผนภูมิแสดงค่าใช้จ่ายในการเดินทางไปประชุมทวีภาคี<br>และไปเยือนต่างประเทศของคณะกรรมการ'
+        text: 'แผนภูมิแสดงส่วนต่างภาพรวมปี 2567-2568'
     },
     tooltip: {
         pointFormat: '{series.name}: <b>{point.percentage:.0f}%</b>'
@@ -74,14 +74,14 @@ Highcharts.chart('chart-expense-travel-foreign-visit', {
                 distance: 20,
                 format: '{point.name}',
                 style: {
-                    fontSize: '1em'
+                    fontSize: '24px'  // เพิ่มขนาดฟอนต์สำหรับชื่อ
                 }
             }, {
                 enabled: true,
                 distance: -15,
                 format: '{point.percentage:.0f}%',
                 style: {
-                    fontSize: '1em'
+                    fontSize: '0.9em'
                 }
             }],
             showInLegend: true
@@ -92,17 +92,13 @@ Highcharts.chart('chart-expense-travel-foreign-visit', {
         colorByPoint: true,
         innerSize: '75%',
         data: [{
-            name: 'สำนักกรรมาธิการ 1',
-            color: '#888C8B', // สีแดง
-            y: 30000000000
+            name: 'เบิกจ่าย',
+            color: '#881227', // สีแดง
+            y: 8700000000
         }, {
-            name: 'สำนักกรรมาธิการ 2',
-            color: '#313F59', // สีเหลือ
-            y: 20000000000
-        }, {
-            name: 'สำนักกรรมาธิการ 3',
-            color: '#2F5259', // สีเหลือ
-            y: 20000000000
-        }]
+            name: 'คงเหลือ',
+            color: '#315259', // สีเหลือ
+            y: 8300000000
+        },]
     }]
 });

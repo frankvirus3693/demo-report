@@ -7,7 +7,7 @@ Highcharts.setOptions({
     }
 });
 
-Highcharts.chart('bar-compare-disbursement', {
+Highcharts.chart('column-compare-disbursement', {
     chart: {
         type: 'column'
     },

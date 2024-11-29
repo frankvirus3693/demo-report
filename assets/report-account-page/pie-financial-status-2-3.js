@@ -2,12 +2,12 @@ Highcharts.setOptions({
     chart: {
         style: {
             fontFamily: 'Sarabun-Regular, sans-serif',
-             fontSize: '24px'
+             fontSize: '18px'
         }
     }
 });
 
-Highcharts.chart('chart-overall-budget-2567', {
+Highcharts.chart('pie-financial-status-2-3', {
     chart: {
         type: 'pie',
         custom: {},
@@ -20,7 +20,7 @@ Highcharts.chart('chart-overall-budget-2567', {
                 if (!customLabel) {
                     customLabel = chart.options.chart.custom.label =
                         chart.renderer.label(
-                            '<strong>งบประมาณ</strong><br/><strong style="font-size: 1em;">ภาพรวมปี 2567</strong></br>30,000,000,000</br>บาท'
+                            '<strong>รวมสินทรัพย์</strong></br>50,000,000,000</br>บาท'
                         )
                             .css({
                                 color: '#000',
@@ -50,7 +50,7 @@ Highcharts.chart('chart-overall-budget-2567', {
         }
     },
     title: {
-        text: 'แผนภูมิแสดงงบประมาณภาพรวมปี 2567'
+        text: 'แผนภูมิแสดงฐานะทางการเงิน (2,3)'
     },
     tooltip: {
         pointFormat: '{series.name}: <b>{point.percentage:.0f}%</b>'
@@ -74,7 +74,7 @@ Highcharts.chart('chart-overall-budget-2567', {
                 distance: 20,
                 format: '{point.name}',
                 style: {
-                    fontSize: '24px'  // เพิ่มขนาดฟอนต์สำหรับชื่อ
+                    fontSize: '18px'  // เพิ่มขนาดฟอนต์สำหรับชื่อ
                 }
             }, {
                 enabled: true,
@@ -92,13 +92,13 @@ Highcharts.chart('chart-overall-budget-2567', {
         colorByPoint: true,
         innerSize: '75%',
         data: [{
-            name: 'เบิกจ่าย',
-            color: '#881227', // สีแดง
-            y: 10000000000
+            name: 'รวมสินทรัพย์สุทธิ/ส่วนทุน',
+            color: '#881227', 
+            y: 40000000000
         }, {
-            name: 'คงเหลือ',
-            color: '#315259', // สีเหลือ
-            y: 20000000000
+            name: 'รวมหนี้สิน',
+            color: '#313F59', 
+            y: 10000000000
         },]
     }]
 });

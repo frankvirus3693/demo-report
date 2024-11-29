@@ -7,7 +7,7 @@ Highcharts.setOptions({
     }
 });
 
-Highcharts.chart('chart-overall-budget-difference', {
+Highcharts.chart('pie-overall-budget-2567', {
     chart: {
         type: 'pie',
         custom: {},
@@ -20,7 +20,7 @@ Highcharts.chart('chart-overall-budget-difference', {
                 if (!customLabel) {
                     customLabel = chart.options.chart.custom.label =
                         chart.renderer.label(
-                            '<strong>ส่วนต่างงบ</strong><br/><strong style="font-size: 1em;">ประมาณภาพรวม</strong></br>17,000,000,000</br>บาท'
+                            '<strong>งบประมาณ</strong><br/><strong style="font-size: 1em;">ภาพรวมปี 2567</strong></br>30,000,000,000</br>บาท'
                         )
                             .css({
                                 color: '#000',
@@ -50,7 +50,7 @@ Highcharts.chart('chart-overall-budget-difference', {
         }
     },
     title: {
-        text: 'แผนภูมิแสดงส่วนต่างภาพรวมปี 2567-2568'
+        text: 'แผนภูมิแสดงงบประมาณภาพรวมปี 2567'
     },
     tooltip: {
         pointFormat: '{series.name}: <b>{point.percentage:.0f}%</b>'
@@ -94,11 +94,11 @@ Highcharts.chart('chart-overall-budget-difference', {
         data: [{
             name: 'เบิกจ่าย',
             color: '#881227', // สีแดง
-            y: 8700000000
+            y: 10000000000
         }, {
             name: 'คงเหลือ',
             color: '#315259', // สีเหลือ
-            y: 8300000000
+            y: 20000000000
         },]
     }]
 });

@@ -7,7 +7,7 @@ Highcharts.setOptions({
     }
 });
 
-Highcharts.chart('chart-overall-budget', {
+Highcharts.chart('pie-overall-budget-2568', {
     chart: {
         type: 'pie',
         custom: {},
@@ -20,7 +20,7 @@ Highcharts.chart('chart-overall-budget', {
                 if (!customLabel) {
                     customLabel = chart.options.chart.custom.label =
                         chart.renderer.label(
-                            '<strong>งบประมาณ</strong><br/><span style="font-size: 1em;">ภาพรวม</span></br>100,000 </br>ล้านบาท'
+                            '<strong>งบประมาณ</strong><br/><strong style="font-size: 1em;">ภาพรวมปี 2568</strong></br>13,000,000,000</br>บาท'
                         )
                             .css({
                                 color: '#000',
@@ -30,20 +30,19 @@ Highcharts.chart('chart-overall-budget', {
                 }
 
                 const x = series.center[0] + chart.plotLeft,
-                    y = series.center[1] + chart.plotTop - 
-                    (customLabel.attr('height') / 1.5);
+                    y = series.center[1] + chart.plotTop -
+                    (customLabel.attr('height') / 2);
 
                 customLabel.attr({
                     x,
                     y
                 });
-
-                // ปรับขนาดฟอนต์ตามเส้นผ่านศูนย์กลางของกราฟ
+                // Set font size based on chart diameter
                 customLabel.css({
-                    fontSize: `${series.center[2] / 10}px`
+                    fontSize: `${series.center[2] / 12}px`
                 });
             }
-        },
+        }
     },
     accessibility: {
         point: {
@@ -51,10 +50,19 @@ Highcharts.chart('chart-overall-budget', {
         }
     },
     title: {
-        text: 'แผนภูมิแสดงงบโครงการ',
+        text: 'แผนภูมิแสดงงบประมาณภาพรวมปี 2568'
     },
     tooltip: {
         pointFormat: '{series.name}: <b>{point.percentage:.0f}%</b>'
+    },
+    legend: {
+        itemStyle: {
+            fontSize: '18px',
+            fontWeight: 'normal',
+        },
+        labelFormatter: function() {
+        return this.name + ' (' + this.percentage.toFixed(1) + '%) : ' + Highcharts.numberFormat(this.y, 0, ',', ',') + ' บาท';
+    }
     },
     plotOptions: {
         series: {
@@ -72,28 +80,25 @@ Highcharts.chart('chart-overall-budget', {
                 enabled: true,
                 distance: -15,
                 format: '{point.percentage:.0f}%',
+                style: {
+                    fontSize: '0.9em'
+                }
             }],
             showInLegend: true
-        },
-        pie: {
-            dataLabels: {
-                distance: -20
-            },
-            size: '80%'
         }
     },
     series: [{
-        name: 'เปอร์เซ็นต์',
+        name: 'เปอเซ็น',
         colorByPoint: true,
         innerSize: '75%',
         data: [{
             name: 'เบิกจ่าย',
-            color: '#8A0C27', // สีแดง
-            y: 60000
+            color: '#881227', // สีแดง
+            y: 5000000000
         }, {
             name: 'คงเหลือ',
-            color: '#2F5259', // สีฟ้า
-            y: 40000
-        }]
-    }],
+            color: '#315259', // สีเหลือ
+            y: 6000000000
+        },]
+    }]
 });

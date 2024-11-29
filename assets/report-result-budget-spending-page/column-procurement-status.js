@@ -7,7 +7,7 @@ Highcharts.setOptions({
     }
 });
 
-Highcharts.chart('bar-procurement-status', {
+Highcharts.chart('column-procurement-status', {
     chart: {
         type: 'column'
     },

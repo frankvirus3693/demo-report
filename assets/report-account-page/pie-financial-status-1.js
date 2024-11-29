@@ -2,12 +2,12 @@ Highcharts.setOptions({
     chart: {
         style: {
             fontFamily: 'Sarabun-Regular, sans-serif',
-             fontSize: '24px'
+             fontSize: '18px'
         }
     }
 });
 
-Highcharts.chart('chart-overall-budget-2568', {
+Highcharts.chart('pie-financial-status-1', {
     chart: {
         type: 'pie',
         custom: {},
@@ -20,7 +20,7 @@ Highcharts.chart('chart-overall-budget-2568', {
                 if (!customLabel) {
                     customLabel = chart.options.chart.custom.label =
                         chart.renderer.label(
-                            '<strong>งบประมาณ</strong><br/><strong style="font-size: 1em;">ภาพรวมปี 2568</strong></br>13,000,000,000</br>บาท'
+                            '<strong>รวมสินทรัพย์</strong></br>100,000,000,000</br>บาท'
                         )
                             .css({
                                 color: '#000',
@@ -50,7 +50,7 @@ Highcharts.chart('chart-overall-budget-2568', {
         }
     },
     title: {
-        text: 'แผนภูมิแสดงงบประมาณภาพรวมปี 2568'
+        text: 'แผนภูมิแสดงฐานะทางการเงิน (1)'
     },
     tooltip: {
         pointFormat: '{series.name}: <b>{point.percentage:.0f}%</b>'
@@ -74,14 +74,14 @@ Highcharts.chart('chart-overall-budget-2568', {
                 distance: 20,
                 format: '{point.name}',
                 style: {
-                    fontSize: '24px'  // เพิ่มขนาดฟอนต์สำหรับชื่อ
+                    fontSize: '18px'  // เพิ่มขนาดฟอนต์สำหรับชื่อ
                 }
             }, {
                 enabled: true,
                 distance: -15,
                 format: '{point.percentage:.0f}%',
                 style: {
-                    fontSize: '0.9em'
+                    fontSize: '18px'
                 }
             }],
             showInLegend: true
@@ -92,13 +92,13 @@ Highcharts.chart('chart-overall-budget-2568', {
         colorByPoint: true,
         innerSize: '75%',
         data: [{
-            name: 'เบิกจ่าย',
-            color: '#881227', // สีแดง
-            y: 5000000000
+            name: 'สินทรัพย์หมุนเวียน',
+            color: '#313F59', 
+            y: 60000000000
         }, {
-            name: 'คงเหลือ',
-            color: '#315259', // สีเหลือ
-            y: 6000000000
+            name: 'สินทรัพย์ไม่หมุนเวียน',
+            color: '#590F23', 
+            y: 40000000000
         },]
     }]
 });

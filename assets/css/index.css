@@ -46,12 +46,13 @@ section {
 .head-title{
     font-family: 'Sarabun-regular', sans-serif;
     font-weight: bold;
-    font-size: 40px;
+    font-size: 32px;
 }
 
 /* กำหนด CSS สำหรับหัวข้อย่อยในหน้ารายงาน*/
 .title-section{
     font-family: 'Sarabun-light', sans-serif;
+    font-size: 26px;
 }
 
 /* กำหนด CSS สำหรับ table */
@@ -79,6 +80,7 @@ table td{
 .font-value , .font-percent{
     font-family: 'DBHeavent', sans-serif;
     font-weight: bold;
+    line-height: 1.1;
 }
 
 /* กำหนดตัวหนังสือสำหรับ card ขนาด md-3 */
@@ -90,12 +92,12 @@ table td{
 
 .card-md-3-title{
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .card-md-3-value{
     font-weight: bold;
-    font-size: 46px;
+    font-size: 36px;
 }
 
 .card-md-3-percent{
@@ -112,7 +114,7 @@ table td{
 
 .card-md-4-title{
     font-weight: bold;
-    font-size: 24px;
+    font-size: 22px;
 }
 
 .card-md-4-value{
@@ -148,7 +150,6 @@ table td{
 }
 
 
-
 /* กำหนดตัวหนังสือสำหรับ card แบบที่ 2 ที่ ขนาด md-3 สำหรับแสดงผลแผนภูมิการจัดจ้าง*/
 .card-type2-md-3-icon{
     width: 80px;
@@ -181,3 +182,46 @@ table td{
     font-weight: bold;
     font-size: 36px;
 }
+
+@media (min-width: 320px) and (max-width: 768px) {
+    .card-type2-md-3-icon {
+        width: 50px; /* ปรับขนาดไอคอนตามต้องการ */
+        height: 50px;
+    }
+    .card-type2-md-3-title {
+        text-align: center;
+        font-size: 24px;
+    }
+    .card-type2-md-3-value{
+        text-align: center;
+        font-weight: bold;
+        font-size: 80px;
+        line-height: 1;
+    }
+}
+
+
+/* กำหนดความยาว chart ตามประเภทของ chart*/
+
+.pie{
+    min-height: 500px;
+}
+
+.column{
+    min-height: 600px;
+}
+
+.bar-sm{
+    min-height: 400px;
+}
+.bar-md{
+    min-height: 500px;
+}
+.bar-lg{
+    min-height: 600px;
+}
+
+.area{
+    min-height: 500px;
+}
+

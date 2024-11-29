@@ -21,7 +21,7 @@
         <section>
             <div class="row justify-content-center">
                 <!-- คอลัมน์ซ้าย - การ์ดข้อมูล -->
-                <div class="col-md-6">
+                <div class="col-12 col-md-12 col-lg-6 mb-4">
                     <!-- การ์ดงบประมาณภาพรวม -->
                     <div class="card shadow-sm mb-4" style="overflow: hidden;">
                         <div class="card-body p-0">
@@ -76,10 +76,10 @@
                 </div>
 
                 <!-- คอลัมน์ขวา - แผนภูมิ -->
-                <div class="col-md-6">
+                <div class="col-12 col-md-12 col-lg-6 mb-4">
                     <div class="card shadow-sm h-100">
                         <div class="card-body">
-                            <div id="chart-overall-budget"></div>
+                            <div id="pie-overall-budget" class="pie"></div>
                         </div>
                     </div>
                 </div>
@@ -87,7 +87,7 @@
         </section>
 
         <!-- มิติแสดงรายจ่าย -->
-        <h2 class="my-2">มิติและแผนภูมิแสดงรายจ่ายประจำ-รายจ่ายลงทุน</h2>
+        <h2 class="title-section my-2">มิติและแผนภูมิแสดงรายจ่ายประจำ-รายจ่ายลงทุน</h2>
         <section>
             <div class="card shadow-sm mb-4">
                 <div class="card-body">
@@ -145,17 +145,17 @@
         </section>
 
         <!-- ค่าใช้จ่ายโครงการรายเดือน -->
-        <h2 class="my-2">แผนภูมิแสดงค่าใช้จ่ายโครงการ (รายเดือน)</h2>
+        <h2 class="title-section my-2">แผนภูมิแสดงค่าใช้จ่ายโครงการ (รายเดือน)</h2>
         <section>
             <div class="card shadow-sm mb-4">
                 <div class="card-body">
-                    <div id="area-project-expenses-monthly"></div>
+                    <div id="area-project-expenses-monthly" class="area"></div>
                 </div>
             </div>
 
             <div class="row">
                 <!-- การ์ดค่าใช้จ่ายสูงสุด -->
-                <div class="col-md-4 mb-4">
+                <div class="col-12 col-md-12 col-lg-4 mb-4">
                     <div class="card shadow-sm h-100" style="overflow: hidden;">
                         <div class="card-body p-0">
                             <div class="text-white p-3" style="background-color: #590F23;">
@@ -175,7 +175,7 @@
                 </div>
 
                 <!-- การ์ดค่าใช้จ่ายต่ำสุด -->
-                <div class="col-md-4 mb-4">
+                <div class="col-12 col-md-12 col-lg-4 mb-4">
                     <div class="card shadow-sm h-100" style="overflow: hidden;">
                         <div class="card-body p-0">
                             <div class="text-white p-3" style="background-color: #8A0C27;">
@@ -195,7 +195,7 @@
                 </div>
 
                 <!-- การ์ดค่าใช้จ่ายเฉลี่ย -->
-                <div class="col-md-4 mb-4">
+                <div class="col-12 col-md-12 col-lg-4 mb-4">
                     <div class="card shadow-sm h-100" style="overflow: hidden;">
                         <div class="card-body p-0">
                             <div class="text-white p-3" style="background-color: #2F5259;">
@@ -216,17 +216,17 @@
         </section>
 
         <!-- แผนภูมิอื่นๆ -->
-        <h2 class="my-2">แผนภูมิแสดงการใช้จ่ายภาพรวมรายเดือน ปีงบประมาณ 2568</h2>
+        <h2 class="title-section my-2">แผนภูมิแสดงการใช้จ่ายภาพรวมรายเดือน ปีงบประมาณ 2568</h2>
         <section>
             <div class="card shadow-sm mb-4">
                 <div class="card-body">
-                    <div id="area-project-expenses-year"></div>
+                    <div id="area-project-expenses-year" class="area"></div>
                 </div>
             </div>
             
             <div class="row">
                 <!-- การ์ดค่าใช้จ่ายสูงสุด -->
-                <div class="col-md-4 mb-4">
+                <div class="col-12 col-md-12 col-lg-4 mb-4">
                     <div class="card shadow-sm h-100" style="overflow: hidden;">
                         <div class="card-body p-0">
                             <div class="text-white p-3" style="background-color: #590F23;">
@@ -246,7 +246,7 @@
                 </div>
 
                 <!-- การ์ดค่าใช้จ่ายต่ำสุด -->
-                <div class="col-md-4 mb-4">
+                <div class="col-12 col-md-12 col-lg-4 mb-4">
                     <div class="card shadow-sm h-100" style="overflow: hidden;">
                         <div class="card-body p-0">
                             <div class="text-white p-3" style="background-color: #8A0C27;">
@@ -266,7 +266,7 @@
                 </div>
 
                 <!-- การ์ดค่าใช้จ่ายเฉลี่ย -->
-                <div class="col-md-4 mb-4">
+                <div class="col-12 col-md-12 col-lg-4 mb-4">
                     <div class="card shadow-sm h-100" style="overflow: hidden;">
                         <div class="card-body p-0">
                             <div class="text-white p-3" style="background-color: #2F5259;">
@@ -286,20 +286,20 @@
             </div>
         </section>
 
-        <h2 class="my-2">แผนภูมิค่าใช้จ่ายรายสำนักโครงการ</h2>
+        <h2 class="title-section my-2">แผนภูมิค่าใช้จ่ายรายสำนักโครงการ</h2>
         <section>
             <div class="card shadow-sm mb-4">
                 <div class="card-body">
-                    <div id="bar-project-expense-per-office" style="height: 500px;"></div>
+                    <div id="bar-project-expense-per-office" class="bar-sm"></div>
                 </div>
             </div>
         </section>
 
-        <h2 class="my-2">แผนภูมิการใช้จ่ายรายการงบรายจ่าย</h2>
+        <h2 class="title-section my-2">แผนภูมิการใช้จ่ายรายการงบรายจ่าย</h2>
         <section>
             <div class="card shadow-sm mb-4">
                 <div class="card-body">
-                    <div id="bar-project-expense-budget-items" style="height: 500px;"></div>
+                    <div id="bar-project-expense-budget-items" class="bar-md"></div>
                 </div>
             </div>
         </section>
@@ -315,7 +315,7 @@
     <script src="../js/exporting.js"></script>
     <script src="../js/accessibility.js"></script>
     <script src="../js/chart.js"></script>
-    <script src="chart-overall-budget.js"></script>
+    <script src="pie-overall-budget.js"></script>
     <script src="column-current-expenses-capital-expenditures.js"></script>
     <script src="area-project-expenses-monthly.js"></script>
     <script src="area-project-expenses-year.js"></script>

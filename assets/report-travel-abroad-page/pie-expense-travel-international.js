@@ -2,12 +2,12 @@ Highcharts.setOptions({
     chart: {
         style: {
             fontFamily: 'Sarabun-Regular, sans-serif',
-             fontSize: '24px'
+            fontSize: '24px'
         }
     }
 });
 
-Highcharts.chart('chart-overall-budget-difference', {
+Highcharts.chart('pie-expense-travel-international', {
     chart: {
         type: 'pie',
         custom: {},
@@ -20,7 +20,7 @@ Highcharts.chart('chart-overall-budget-difference', {
                 if (!customLabel) {
                     customLabel = chart.options.chart.custom.label =
                         chart.renderer.label(
-                            '<strong>ส่วนต่างงบ</strong><br/><strong style="font-size: 1em;">ประมาณภาพรวม</strong></br>17,000,000,000</br>บาท'
+                            '<strong>ค่ายใช้จ่าย</strong><br/><strong>การเดินทาง</strong><br><strong>ประชุมนานาชาติ</strong><span style="font-size: 1em;"></span></br>1,000,000,000</br>บาท'
                         )
                             .css({
                                 color: '#000',
@@ -31,7 +31,7 @@ Highcharts.chart('chart-overall-budget-difference', {
 
                 const x = series.center[0] + chart.plotLeft,
                     y = series.center[1] + chart.plotTop -
-                    (customLabel.attr('height') / 2);
+                    (customLabel.attr('height') /2);
 
                 customLabel.attr({
                     x,
@@ -50,7 +50,7 @@ Highcharts.chart('chart-overall-budget-difference', {
         }
     },
     title: {
-        text: 'แผนภูมิแสดงส่วนต่างภาพรวมปี 2567-2568'
+        text: 'แผนภูมิแสดงค่าใช้จ่ายในการเดินทางไปประชุมนานชาติ<br>ไปเยือนต่างประเทศและรับรองแขกต่างประเทศ'
     },
     tooltip: {
         pointFormat: '{series.name}: <b>{point.percentage:.0f}%</b>'
@@ -74,14 +74,14 @@ Highcharts.chart('chart-overall-budget-difference', {
                 distance: 20,
                 format: '{point.name}',
                 style: {
-                    fontSize: '24px'  // เพิ่มขนาดฟอนต์สำหรับชื่อ
+                    fontSize: '1em'
                 }
             }, {
                 enabled: true,
                 distance: -15,
                 format: '{point.percentage:.0f}%',
                 style: {
-                    fontSize: '0.9em'
+                    fontSize: '1em'
                 }
             }],
             showInLegend: true
@@ -92,13 +92,13 @@ Highcharts.chart('chart-overall-budget-difference', {
         colorByPoint: true,
         innerSize: '75%',
         data: [{
-            name: 'เบิกจ่าย',
-            color: '#881227', // สีแดง
-            y: 8700000000
+            name: 'ใช้ไปแล้ว',
+            color: '#313F59', // สีแดง
+            y: 450000000
         }, {
             name: 'คงเหลือ',
-            color: '#315259', // สีเหลือ
-            y: 8300000000
-        },]
+            color: '#2F5259', // สีเหลือ
+            y: 550000000
+        }]
     }]
 });

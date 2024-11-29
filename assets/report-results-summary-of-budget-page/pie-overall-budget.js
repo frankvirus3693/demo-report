@@ -1,13 +1,14 @@
+
 Highcharts.setOptions({
     chart: {
         style: {
             fontFamily: 'Sarabun-Regular, sans-serif',
-            fontSize: '24px'
+             fontSize: '24px'
         }
     }
 });
 
-Highcharts.chart('chart-expense-travel-international', {
+Highcharts.chart('pie-overall-budget', {
     chart: {
         type: 'pie',
         custom: {},
@@ -20,7 +21,7 @@ Highcharts.chart('chart-expense-travel-international', {
                 if (!customLabel) {
                     customLabel = chart.options.chart.custom.label =
                         chart.renderer.label(
-                            '<strong>ค่ายใช้จ่าย</strong><br/><strong>การเดินทาง</strong><br><strong>ประชุมนานาชาติ</strong><span style="font-size: 1em;"></span></br>1,000,000,000</br>บาท'
+                            '<strong>งบประมาณ</strong><br/><span style="font-size: 1em;">ภาพรวม</span></br>100,000 </br>ล้านบาท'
                         )
                             .css({
                                 color: '#000',
@@ -30,19 +31,20 @@ Highcharts.chart('chart-expense-travel-international', {
                 }
 
                 const x = series.center[0] + chart.plotLeft,
-                    y = series.center[1] + chart.plotTop -
-                    (customLabel.attr('height') /2);
+                    y = series.center[1] + chart.plotTop - 
+                    (customLabel.attr('height') / 1.5);
 
                 customLabel.attr({
                     x,
                     y
                 });
-                // Set font size based on chart diameter
+
+                // ปรับขนาดฟอนต์ตามเส้นผ่านศูนย์กลางของกราฟ
                 customLabel.css({
-                    fontSize: `${series.center[2] / 12}px`
+                    fontSize: `${series.center[2] / 10}px`
                 });
             }
-        }
+        },
     },
     accessibility: {
         point: {
@@ -50,19 +52,10 @@ Highcharts.chart('chart-expense-travel-international', {
         }
     },
     title: {
-        text: 'แผนภูมิแสดงค่าใช้จ่ายในการเดินทางไปประชุมนานชาติ<br>ไปเยือนต่างประเทศและรับรองแขกต่างประเทศ'
+        text: 'แผนภูมิแสดงงบประมาณภาพรวม',
     },
     tooltip: {
         pointFormat: '{series.name}: <b>{point.percentage:.0f}%</b>'
-    },
-    legend: {
-        itemStyle: {
-            fontSize: '18px',
-            fontWeight: 'normal',
-        },
-        labelFormatter: function() {
-        return this.name + ' (' + this.percentage.toFixed(1) + '%) : ' + Highcharts.numberFormat(this.y, 0, ',', ',') + ' บาท';
-    }
     },
     plotOptions: {
         series: {
@@ -74,31 +67,34 @@ Highcharts.chart('chart-expense-travel-international', {
                 distance: 20,
                 format: '{point.name}',
                 style: {
-                    fontSize: '1em'
+                    fontSize: '24px'  // เพิ่มขนาดฟอนต์สำหรับชื่อ
                 }
             }, {
                 enabled: true,
                 distance: -15,
                 format: '{point.percentage:.0f}%',
-                style: {
-                    fontSize: '1em'
-                }
             }],
             showInLegend: true
+        },
+        pie: {
+            dataLabels: {
+                distance: -20
+            },
+            size: '80%'
         }
     },
     series: [{
-        name: 'เปอเซ็น',
+        name: 'เปอร์เซ็นต์',
         colorByPoint: true,
         innerSize: '75%',
         data: [{
-            name: 'ใช้ไปแล้ว',
-            color: '#313F59', // สีแดง
-            y: 450000000
+            name: 'เบิกจ่าย',
+            color: '#8A0C27', // สีแดง
+            y: 60000
         }, {
             name: 'คงเหลือ',
-            color: '#2F5259', // สีเหลือ
-            y: 550000000
+            color: '#2F5259', // สีฟ้า
+            y: 40000
         }]
-    }]
+    }],
 });
